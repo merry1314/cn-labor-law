@@ -1,6 +1,6 @@
 # 中国劳动法知识库（china-labor-advisor）
 
-单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **9 部法律法规全文**的结构化知识模块（`topics/`），共 **59 个章节文件**。用户只需直接提问（"我被裁了"、"工伤了怎么办"、"公积金该交多少"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
+单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **9 部法律法规全文**的结构化知识模块（`topics/`，共 **59 个章节文件**）与 **1 个应用型审查模块**（policy-review，10 个审查主题）。用户只需直接提问（"我被裁了"、"工伤了怎么办"、"公积金该交多少"、"帮我看看员工手册合不合法"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
 
 - **技能入口**: [china-labor-advisor/SKILL.md](china-labor-advisor/SKILL.md)
 - **生成日期**: 2026-09-26
@@ -22,7 +22,8 @@ china-labor-advisor/
     ├── civil-code/                     民法典（5章）· 协议撤销/人格权/侵权赔偿
     ├── work-injury-regulations/        工伤保险条例（4章）· 认定/伤残梯度/工亡
     ├── paid-annual-leave-regulations/  年休假条例+办法（2章）· 折算/300%补偿
-    └── housing-fund-regulations/       住房公积金管理条例（2章）· 缴存比例/提取/投诉
+    ├── housing-fund-regulations/       住房公积金管理条例（2章）· 缴存比例/提取/投诉
+    └── policy-review/                  规章制度合规审查（应用层）· 四步流程+10主题红牌库
 
 每个模块目录内：INDEX.md（模块索引，原 SKILL.md）+ chapters/ + glossary.md + patterns.md + cheatsheet.md
 （china-labor-law 另含 worker-playbook.md 劳动者维权行动手册）
@@ -41,6 +42,7 @@ china-labor-advisor/
 | [work-injury-regulations](china-labor-advisor/topics/work-injury-regulations/INDEX.md) | 《工伤保险条例》67条（2010修订） | 4 | **行政法规**：工伤认定、48小时、伤残待遇梯度、工亡三费 |
 | [paid-annual-leave-regulations](china-labor-advisor/topics/paid-annual-leave-regulations/INDEX.md) | 年休假条例10条+实施办法19条 | 2 | **行政规章**：5/10/15天档位、两道折算、300%未休补偿 |
 | [housing-fund-regulations](china-labor-advisor/topics/housing-fund-regulations/INDEX.md) | 《住房公积金管理条例》47条（2019修订） | 2 | **行政法规**：缴存比例5%–12%、月缴存额公式、提取六情形、不缴强制执行 |
+| [policy-review](china-labor-advisor/topics/policy-review/INDEX.md) | 规章制度合规审查方法论（应用层） | 10主题 | **应用型**：上传制度文件→五级定级逐条审查→指出违法/损害权益条款→应对策略 |
 
 ---
 

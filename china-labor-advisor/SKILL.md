@@ -1,6 +1,6 @@
 ---
 name: china-labor-advisor
-description: "中国劳动法顾问：劳动者与用人单位的劳动用工、社会保障全领域知识库（9部法律法规全文结构化）。覆盖：劳动合同（签订/二倍工资/无固定期限/试用期/解除终止/经济补偿N与2N/赔偿金）、裁员辞退开除、欠薪克扣工资、加班费、调岗降薪、劳务派遣、竞业限制/保密/服务期违约金、离职协议、五险一金（养老/医疗/失业/生育/工伤）、社保缴费比例与基数（交多少）、住房公积金（缴存比例/提取/贷款/单位不缴）、工伤认定与伤残待遇（48小时/停工留薪期/工亡三费）、年休假（折算/300%补偿）、社保补缴、职场性骚扰、个人信息/隐私、劳动仲裁诉讼（时效/一裁终局/证据举证）、离职协议撤销、退休返聘。用于回答'该不该赔/赔多少/交多少/怎么告/告谁/法院怎么判'类劳动法律问题；2021-2025最新司法解释口径。"
+description: "中国劳动法顾问：劳动者与用人单位的劳动用工、社会保障全领域知识库（9部法律法规全文结构化+1个应用型审查模块）。覆盖：劳动合同（签订/二倍工资/无固定期限/试用期/解除终止/经济补偿N与2N/赔偿金）、裁员辞退开除、欠薪克扣工资、加班费、调岗降薪、劳务派遣、竞业限制/保密/服务期违约金、离职协议、五险一金（养老/医疗/失业/生育/工伤）、社保缴费比例与基数（交多少）、住房公积金（缴存比例/提取/贷款/单位不缴）、工伤认定与伤残待遇（48小时/停工留薪期/工亡三费）、年休假（折算/300%补偿）、社保补缴、职场性骚扰、个人信息/隐私、劳动仲裁诉讼（时效/一裁终局/证据举证）、离职协议撤销、退休返聘、**审查公司规章制度/员工手册是否合法**（上传制度文件→逐条定级→指出违法与损害权益条款→给应对策略）。用于回答'该不该赔/赔多少/交多少/怎么告/告谁/法院怎么判/制度合不合法'类劳动法律问题；2021-2025最新司法解释口径。"
 ---
 
 <!-- argument-hint: [场景、主题、法条或章号，如"被裁员"、"二倍工资"、"工伤认定"、"第38条"、"竞业限制"] -->
@@ -32,6 +32,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 加班费 | [劳动法](topics/china-labor-law/INDEX.md) ch04 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch04（42条两步举证） |
 | 公司没缴社保 / 签了放弃社保声明 | [社保法](topics/social-insurance-law/INDEX.md) ch07 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch08（19条声明无效+解除补偿） |
 | 公积金该交多少 / 单位不缴公积金 | [公积金条例](topics/housing-fund-regulations/INDEX.md) ch01（16、18条缴存公式与比例） | ch02（37、38条投诉与强制执行）、[社保法 cheatsheet](topics/social-insurance-law/cheatsheet.md)（五险比例速查） |
+| 审查公司规章制度 / 员工手册合不合法 | [规章制度审查](topics/policy-review/INDEX.md)（四步审查流程+10主题红牌库） | 五级定级报告（🔴违法/🟠损害权益/🟡程序风险/🔵欠佳），逐条给法律依据与应对 |
 | 工伤（受伤了/认定/待遇/赔偿） | [工伤条例](topics/work-injury-regulations/INDEX.md) ch02–ch03 | [社保法](topics/social-insurance-law/INDEX.md) ch04、[民法典](topics/civil-code/INDEX.md) ch05（第三人侵权双轨） |
 | 上下班途中车祸 | [工伤条例](topics/work-injury-regulations/INDEX.md) ch02（14条六+举证包） | [民法典](topics/civil-code/INDEX.md) ch05（1213条保险顺序）、[劳动法](topics/china-labor-law/INDEX.md) ch04 |
 | 竞业限制/保密协议/服务期 | [labor-contract-law](topics/labor-contract-law/INDEX.md) ch02 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch07（适配原则/违约双付）、[民法典](topics/civil-code/INDEX.md) ch03（585条违约金酌减） |
@@ -54,6 +55,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 劳动合同法（第1–98条） | [topics/labor-contract-law](topics/labor-contract-law/INDEX.md) — 8章 |
 | 社会保险法（第1–98条） | [topics/social-insurance-law](topics/social-insurance-law/INDEX.md) — 12章 |
 | 住房公积金管理条例（7章47条） | [topics/housing-fund-regulations](topics/housing-fund-regulations/INDEX.md) — 2章 |
+| 规章制度合规审查（应用层，10主题红牌库） | [topics/policy-review](topics/policy-review/INDEX.md) — review-guides |
 | 劳动争议调解仲裁法 | [topics/labor-dispute-arbitration-law](topics/labor-dispute-arbitration-law/INDEX.md) — 5章 |
 | 最高法解释（一）54条/（二）21条 | [topics/labor-dispute-judicial-interpretations](topics/labor-dispute-judicial-interpretations/INDEX.md) — 8章 |
 | 民法典（1260条，劳动关联） | [topics/civil-code](topics/civil-code/INDEX.md) — 5章 |
