@@ -4,7 +4,7 @@
 
 - **技能入口**: [china-labor-advisor/SKILL.md](china-labor-advisor/SKILL.md)
 - **生成日期**: 2026-09-26
-- **法律文本基准**: 劳动法（2018修正）、劳动合同法（2012修正）、社会保险法（2018修正）、调解仲裁法（2009）、民法典（2020）、工伤保险条例（2010修订）、年休假条例（2007）+实施办法（2008）、住房公积金管理条例（2019修订）、最高法劳动争议解释（一）（2021）+（二）（2025）
+- **法律文本基准**: 劳动法（2018修正）、劳动合同法（2012修正）、社会保险法（2018修正）、调解仲裁法（2007通过，2008-05-01施行）、民法典（2020）、工伤保险条例（2010修订）、年休假条例（2007）+实施办法（2008）、住房公积金管理条例（2019修订）、最高法劳动争议解释（一）（2021）+（二）（2025）
 
 ---
 
@@ -35,7 +35,7 @@ china-labor-advisor/
 | [china-labor-law](china-labor-advisor/topics/china-labor-law/INDEX.md) | 《劳动法》107条（2018修正） | 13 | **框架法**：就业、工时、工资、社保、安全卫生、特殊保护、争议、法律责任 |
 | [labor-contract-law](china-labor-advisor/topics/labor-contract-law/INDEX.md) | 《劳动合同法》98条（2012修正） | 8 | **劳动关系特别法**：订立、二倍工资、无固定期限、解除/终止、N与2N、劳务派遣 |
 | [social-insurance-law](china-labor-advisor/topics/social-insurance-law/INDEX.md) | 《社会保险法》98条（2018修正） | 12 | **社保特别法**：五险框架、征缴、待遇、基金、监督处罚 |
-| [labor-dispute-arbitration-law](china-labor-advisor/topics/labor-dispute-arbitration-law/INDEX.md) | 《调解仲裁法》（2009） | 5 | **程序法**：仲裁前置、1年时效、一裁终局、开庭举证 |
+| [labor-dispute-arbitration-law](china-labor-advisor/topics/labor-dispute-arbitration-law/INDEX.md) | 《调解仲裁法》（2007通过） | 5 | **程序法**：仲裁前置、1年时效、一裁终局、开庭举证 |
 | [labor-dispute-judicial-interpretations](china-labor-advisor/topics/labor-dispute-judicial-interpretations/INDEX.md) | 最高法解释（一）54条+（二）21条 | 8 | **审判口径**：受案、当事人、竞业、放弃社保无效、时效失权（2025-09-01最新） |
 | [civil-code](china-labor-advisor/topics/civil-code/INDEX.md) | 《民法典》1260条（2021施行） | 5 | **民事基本法**（劳动关联）：协议撤销、格式条款、人格权（性骚扰/个人信息）、用人单位责任、工伤侵权双轨 |
 | [work-injury-regulations](china-labor-advisor/topics/work-injury-regulations/INDEX.md) | 《工伤保险条例》67条（2010修订） | 4 | **行政法规**：工伤认定、48小时、伤残待遇梯度、工亡三费 |
@@ -105,7 +105,9 @@ china-labor-advisor/
 
 ## 原始法律文本
 
-`_sources/` 目录保存 9 部法律的全文（`.txt` 提取文本 + 原始 `.html`），是全部章节文件的**唯一事实来源**：
+`_sources/` 目录保存 **12 个**法律文本（`.txt` 提取文本 + 原始 `.html`）。其中 **9 部**已建成知识模块，**2 部**（劳动保障监察条例、保障农民工工资支付条例）为已采集、未建模块的备用源：
+
+**已建模块（9 部）**：
 
 | 文件 | 内容 |
 |---|---|
@@ -119,18 +121,26 @@ china-labor-advisor/
 | nianxiujia-tiaoli.txt / nianxiujia-banfa.txt | 年休假条例 / 实施办法 |
 | gongjijin-tiaoli.txt | 住房公积金管理条例（2019修订） |
 
+**备用源（2 部，未建模块）**：
+
+| 文件 | 内容 |
+|---|---|
+| jiancaitiaoli.txt | 劳动保障监察条例 |
+| nongminggong-tiaoli.txt | 保障农民工工资支付条例 |
+
 ---
 
 ## 范围与免责声明
 
-**覆盖**：8 部法律/法规全文，按劳动者维权视角深度展开（每条文配 When to use / Anti-patterns / Worked Example）。
+**覆盖**：9 部法律/法规全文，按劳动者维权视角深度展开（每条文配 When to use / Anti-patterns / Worked Example）。
 
 **已知边界**：
-- **地方口径**：两金标准（工伤医疗/就业补助金）、停工留薪期目录、双赔/补差、加班费基数细则等以**省级规定与受诉法院口径**为准（知识库内以 ※ 标注）
+- **地方口径**：两金标准（工伤医疗/就业补助金）、停工留薪期目录、双赔/补差、加班费基数细则、社保公积金具体费率等以**省级规定与受诉法院口径**为准（知识库内以 ※ 标注）
+- **动态数据**：一次性工亡补助金（20倍×上年度城镇居民人均可支配收入）等逐年更新的标准，文中已列近年数值（2024–2026年度），使用时以人社部当年公布为准
 - **未展开**：《职业病防治法》《安全生产法》等未建模块（相关条文已交叉引用）；民法典物权/婚姻/继承编仅交叉提及
 - **时效性**：生成于 2026-09-26，此后新司法解释/修订以官方文本为准
 
-**免责声明**：本知识库为法律知识整理，**不构成法律意见**。个案结论受证据、伤残等级鉴定与地方实践影响，重大争议请咨询执业律师。
+**免责声明与生成方式披露**：本知识库由 AI（AtomCode）辅助生成、经人工校对（含法条编号扫描与引用核对），**未经执业律师独立复核**，为法律知识整理，**不构成法律意见**。个案结论受证据、伤残等级鉴定与地方实践影响，重大争议请咨询执业律师。
 
 ---
 
