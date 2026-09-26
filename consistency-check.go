@@ -3,10 +3,10 @@
 // 用法：go run consistency-check.go
 //
 // 校验项（规则级，非特定缺陷硬编码）：
-//  1. 模块总数 = 13 法律模块 + 1 policy-review = 14
-//  2. 章节总数 = 80，各模块章节数匹配
+//  1. 模块总数 = 15 法律模块 + 1 policy-review = 16
+//  2. 章节总数 = 87，各模块章节数匹配
 //  3. 每个法律模块含 INDEX.md + chapters/ + glossary.md + patterns.md + cheatsheet.md
-//  4. SKILL.md 与 README.md 头部统计口径一致（13 部 / 80 章）
+//  4. SKILL.md 与 README.md 头部统计口径一致（15 部 / 87 章）
 //  5. 工亡补助金动态数据 3 处均含「数据基准日」标记
 //  6. DYNAMIC-DATA 表格算术一致性：适用年度=收入年度+1，补助金=收入×20
 //  7. 通用路由校验：所有 模块/chNN 引用的章节文件必须存在
@@ -35,7 +35,7 @@ const (
 	readmePath = "README.md"
 )
 
-// 13 个法律知识模块
+// 15 个法律知识模块
 var lawModules = []string{
 	"china-labor-law",
 	"labor-contract-law",
@@ -50,6 +50,8 @@ var lawModules = []string{
 	"labor-inspection-regulations",
 	"occupational-disease-prevention-law",
 	"work-safety-law",
+	"employment-promotion-law",
+	"female-worker-protection",
 }
 
 // 每个模块预期章节数
@@ -67,6 +69,8 @@ var expectedChapters = map[string]int{
 	"labor-inspection-regulations":           3,
 	"occupational-disease-prevention-law":    6,
 	"work-safety-law":                        6,
+	"employment-promotion-law":               4,
+	"female-worker-protection":               3,
 }
 
 // 各法律条文数上限（用于法条号越界扫描）
@@ -90,11 +94,14 @@ var articleLimits = map[string]int{
 	"劳动保障监察条例":    36,
 	"职业病防治法":      87,
 	"安全生产法":       119,
+	"就业促进法":       69,
+	"女职工劳动保护特别规定": 16,
+	"女职工保护规定":     16,
 }
 
 const (
-	expectedLawModules    = 13
-	expectedTotalChapters = 80
+	expectedLawModules    = 15
+	expectedTotalChapters = 87
 )
 
 type check struct {
@@ -142,7 +149,7 @@ func main() {
 
 // 1. 模块总数校验
 func checkModuleCount() check {
-	c := check{name: "模块总数 = 13 法律模块 + 1 policy-review"}
+	c := check{name: "模块总数 = 15 法律模块 + 1 policy-review"}
 
 	entries, err := os.ReadDir(topicsDir)
 	if err != nil {
@@ -169,7 +176,7 @@ func checkModuleCount() check {
 
 // 2. 章节总数校验
 func checkChapterCount() check {
-	c := check{name: "章节总数 = 80"}
+	c := check{name: "章节总数 = 87"}
 
 	total := 0
 	for _, mod := range lawModules {
@@ -263,7 +270,7 @@ func checkModuleFiles() check {
 
 // 4. SKILL.md 与 README.md 口径一致性
 func checkSkillReadmeConsistency() check {
-	c := check{name: "SKILL.md / README.md 头部统计口径一致（13 部 / 80 章）"}
+	c := check{name: "SKILL.md / README.md 头部统计口径一致（15 部 / 87 章）"}
 
 	skill, err := os.ReadFile(skillPath)
 	if err != nil {
@@ -281,35 +288,41 @@ func checkSkillReadmeConsistency() check {
 	skillStr := string(skill)
 	readmeStr := string(readme)
 
-	reSkill9 := regexp.MustCompile(`13 部法律法规`)
-	reSkill59 := regexp.MustCompile(`80 章节文件`)
+	reSkill9 := regexp.MustCompile(`15 部法律法规`)
+	reSkill59 := regexp.MustCompile(`87 章节文件`)
 	if !reSkill9.MatchString(skillStr) {
 		c.ok = false
-		c.msg = "SKILL.md 未找到 \"13 部法律法规\""
+		c.msg = "SKILL.md 未找到 \"15 部法律法规\""
 		return c
 	}
 	if !reSkill59.MatchString(skillStr) {
 		c.ok = false
-		c.msg = "SKILL.md 未找到 \"80 章节文件\""
+		c.msg = "SKILL.md 未找到 \"87 章节文件\""
 		return c
 	}
 
-	reReadme9 := regexp.MustCompile(`13 部法律法规`)
-	reReadme59 := regexp.MustCompile(`80 个章节文件`)
+	reReadme9 := regexp.MustCompile(`15 部法律法规`)
+	reReadme59 := regexp.MustCompile(`87 个章节文件`)
 	if !reReadme9.MatchString(readmeStr) {
 		c.ok = false
-		c.msg = "README.md 未找到 \"13 部法律法规\""
+		c.msg = "README.md 未找到 \"15 部法律法规\""
 		return c
 	}
 	if !reReadme59.MatchString(readmeStr) {
 		c.ok = false
-		c.msg = "README.md 未找到 \"80 个章节文件\""
+		c.msg = "README.md 未找到 \"87 个章节文件\""
 		return c
 	}
 
-	if strings.Contains(skillStr, "9 部法律法规") || strings.Contains(skillStr, "59 章节") {
+	if strings.Contains(skillStr, "9 部法律法规") || strings.Contains(skillStr, "13 部法律法规") || strings.Contains(skillStr, "59 章节") || strings.Contains(skillStr, "80 章节") {
 		c.ok = false
-		c.msg = "SKILL.md 仍含旧口径 \"9 部\" 或 \"59 章节\""
+		c.msg = "SKILL.md 仍含旧口径 \"9/13 部\" 或 \"59/80 章节\""
+		return c
+	}
+
+	if strings.Contains(readmeStr, "9 部法律法规") || strings.Contains(readmeStr, "13 部法律法规") || strings.Contains(readmeStr, "59 章节") || strings.Contains(readmeStr, "80 章节") {
+		c.ok = false
+		c.msg = "README.md 仍含旧口径 \"9/13 部\" 或 \"59/80 章节\""
 		return c
 	}
 
