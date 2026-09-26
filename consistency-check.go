@@ -35,7 +35,7 @@ const (
 	readmePath = "README.md"
 )
 
-// 15 个法律知识模块
+// 17 个法律知识模块
 var lawModules = []string{
 	"china-labor-law",
 	"labor-contract-law",
@@ -52,6 +52,8 @@ var lawModules = []string{
 	"work-safety-law",
 	"employment-promotion-law",
 	"female-worker-protection",
+	"disabled-persons-protection-law",
+	"trade-union-law",
 }
 
 // 每个模块预期章节数
@@ -71,6 +73,8 @@ var expectedChapters = map[string]int{
 	"work-safety-law":                        6,
 	"employment-promotion-law":               4,
 	"female-worker-protection":               3,
+	"disabled-persons-protection-law":        4,
+	"trade-union-law":                        4,
 }
 
 // 各法律条文数上限（用于法条号越界扫描）
@@ -97,11 +101,13 @@ var articleLimits = map[string]int{
 	"就业促进法":       69,
 	"女职工劳动保护特别规定": 16,
 	"女职工保护规定":     16,
+	"残疾人保障法":      68,
+	"工会法":         58,
 }
 
 const (
-	expectedLawModules    = 15
-	expectedTotalChapters = 87
+	expectedLawModules    = 17
+	expectedTotalChapters = 95
 )
 
 type check struct {
@@ -149,7 +155,7 @@ func main() {
 
 // 1. 模块总数校验
 func checkModuleCount() check {
-	c := check{name: "模块总数 = 15 法律模块 + 1 policy-review"}
+	c := check{name: "模块总数 = 17 法律模块 + 1 policy-review"}
 
 	entries, err := os.ReadDir(topicsDir)
 	if err != nil {
@@ -176,7 +182,7 @@ func checkModuleCount() check {
 
 // 2. 章节总数校验
 func checkChapterCount() check {
-	c := check{name: "章节总数 = 87"}
+	c := check{name: "章节总数 = 95"}
 
 	total := 0
 	for _, mod := range lawModules {
@@ -270,7 +276,7 @@ func checkModuleFiles() check {
 
 // 4. SKILL.md 与 README.md 口径一致性
 func checkSkillReadmeConsistency() check {
-	c := check{name: "SKILL.md / README.md 头部统计口径一致（15 部 / 87 章）"}
+	c := check{name: "SKILL.md / README.md 头部统计口径一致（17 部 / 95 章）"}
 
 	skill, err := os.ReadFile(skillPath)
 	if err != nil {
@@ -288,41 +294,41 @@ func checkSkillReadmeConsistency() check {
 	skillStr := string(skill)
 	readmeStr := string(readme)
 
-	reSkill9 := regexp.MustCompile(`15 部法律法规`)
-	reSkill59 := regexp.MustCompile(`87 章节文件`)
+	reSkill9 := regexp.MustCompile(`17 部法律法规`)
+	reSkill59 := regexp.MustCompile(`95 章节文件`)
 	if !reSkill9.MatchString(skillStr) {
 		c.ok = false
-		c.msg = "SKILL.md 未找到 \"15 部法律法规\""
+		c.msg = "SKILL.md 未找到 \"17 部法律法规\""
 		return c
 	}
 	if !reSkill59.MatchString(skillStr) {
 		c.ok = false
-		c.msg = "SKILL.md 未找到 \"87 章节文件\""
+		c.msg = "SKILL.md 未找到 \"95 章节文件\""
 		return c
 	}
 
-	reReadme9 := regexp.MustCompile(`15 部法律法规`)
-	reReadme59 := regexp.MustCompile(`87 个章节文件`)
+	reReadme9 := regexp.MustCompile(`17 部法律法规`)
+	reReadme59 := regexp.MustCompile(`95 个章节文件`)
 	if !reReadme9.MatchString(readmeStr) {
 		c.ok = false
-		c.msg = "README.md 未找到 \"15 部法律法规\""
+		c.msg = "README.md 未找到 \"17 部法律法规\""
 		return c
 	}
 	if !reReadme59.MatchString(readmeStr) {
 		c.ok = false
-		c.msg = "README.md 未找到 \"87 个章节文件\""
+		c.msg = "README.md 未找到 \"95 个章节文件\""
 		return c
 	}
 
-	if strings.Contains(skillStr, "9 部法律法规") || strings.Contains(skillStr, "13 部法律法规") || strings.Contains(skillStr, "59 章节") || strings.Contains(skillStr, "80 章节") {
+	if strings.Contains(skillStr, "9 部法律法规") || strings.Contains(skillStr, "13 部法律法规") || strings.Contains(skillStr, "15 部法律法规") || strings.Contains(skillStr, "59 章节") || strings.Contains(skillStr, "80 章节") || strings.Contains(skillStr, "87 章节") {
 		c.ok = false
-		c.msg = "SKILL.md 仍含旧口径 \"9/13 部\" 或 \"59/80 章节\""
+		c.msg = "SKILL.md 仍含旧口径 \"9/13/15 部\" 或 \"59/80/87 章节\""
 		return c
 	}
 
-	if strings.Contains(readmeStr, "9 部法律法规") || strings.Contains(readmeStr, "13 部法律法规") || strings.Contains(readmeStr, "59 章节") || strings.Contains(readmeStr, "80 章节") {
+	if strings.Contains(readmeStr, "9 部法律法规") || strings.Contains(readmeStr, "13 部法律法规") || strings.Contains(readmeStr, "15 部法律法规") || strings.Contains(readmeStr, "59 章节") || strings.Contains(readmeStr, "80 章节") || strings.Contains(readmeStr, "87 章节") {
 		c.ok = false
-		c.msg = "README.md 仍含旧口径 \"9/13 部\" 或 \"59/80 章节\""
+		c.msg = "README.md 仍含旧口径 \"9/13/15 部\" 或 \"59/80/87 章节\""
 		return c
 	}
 

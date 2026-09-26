@@ -7,7 +7,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 
 # 中国劳动法顾问（china-labor-advisor）
 
-**知识库**: 15 部法律法规全文结构化（劳动法/劳动合同法/社会保险法/调解仲裁法/最高法解释一+二/民法典/工伤保险条例/年休假条例+办法/住房公积金管理条例/保障农民工工资支付条例/劳动保障监察条例/职业病防治法/安全生产法/就业促进法/女职工劳动保护特别规定），共 87 章节文件 | **基准日**: 2026-09-26
+**知识库**: 17 部法律法规全文结构化（劳动法/劳动合同法/社会保险法/调解仲裁法/最高法解释一+二/民法典/工伤保险条例/年休假条例+办法/住房公积金管理条例/保障农民工工资支付条例/劳动保障监察条例/职业病防治法/安全生产法/就业促进法/女职工劳动保护特别规定/残疾人保障法/工会法），共 95 章节文件 | **基准日**: 2026-09-27
 
 ## How to Use This Skill
 
@@ -46,6 +46,8 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 劳务派遣（同工不同酬/退回/致害） | [labor-contract-law](topics/labor-contract-law/INDEX.md) ch05 | [民法典](topics/civil-code/INDEX.md) ch05（1191条二）、[年休假](topics/paid-annual-leave-regulations/INDEX.md)（14条派遣年假） |
 | 试用期被辞退 | [labor-contract-law](topics/labor-contract-law/INDEX.md) ch02 | ch04（试用期解除限制） |
 | 退休/返聘 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch03（32条已废止） | [社保法](topics/social-insurance-law/INDEX.md) ch02（养老金）、[民法典](topics/civil-code/INDEX.md) ch05（1192条劳务） |
+| 残疾人就业被拒/歧视/按比例就业 | [残疾人保障法](topics/disabled-persons-protection-law/INDEX.md) ch02 | [就业促进法](topics/employment-promotion-law/INDEX.md) ch01（29条按比例）、ch04（62条歧视直接起诉） |
+| 想组建工会/阻挠建会/集体合同/工会干部被辞 | [工会法](topics/trade-union-law/INDEX.md) ch01–ch02 | [劳动合同法](topics/labor-contract-law/INDEX.md) ch04（43条工会意见）、[司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch06（工会法19条任期保护） |
 
 ## 法条定位表
 
@@ -67,10 +69,12 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 安全生产法（119条） | [topics/work-safety-law](topics/work-safety-law/INDEX.md) — 6章 |
 | 就业促进法（69条） | [topics/employment-promotion-law](topics/employment-promotion-law/INDEX.md) — 4章 |
 | 女职工劳动保护特别规定（16条） | [topics/female-worker-protection](topics/female-worker-protection/INDEX.md) — 3章 |
+| 残疾人保障法（68条） | [topics/disabled-persons-protection-law](topics/disabled-persons-protection-law/INDEX.md) — 4章 |
+| 工会法（58条） | [topics/trade-union-law](topics/trade-union-law/INDEX.md) — 4章 |
 
 **综合入口**：[劳动者维权行动手册](topics/china-labor-law/worker-playbook.md)（从证据到执行的完整流程）。
 
-**法规原文核对**：[LEGAL-SOURCES.md](../LEGAL-SOURCES.md) — 15 部法律法规及司法解释的官方原文链接（全国人大网/中国政府网/最高人民法院），回答中引用法条时必须附上对应官方链接，便于用户核对原文。
+**法规原文核对**：[LEGAL-SOURCES.md](../LEGAL-SOURCES.md) — 17 部法律法规及司法解释的官方原文链接（全国人大网/中国政府网/最高人民法院），回答中引用法条时必须附上对应官方链接，便于用户核对原文。
 
 ---
 
@@ -137,6 +141,6 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 
 - **特别法优先**：劳动法律体系（劳动法/劳动合同法/社保法/仲裁法）优先于民法典；特别法无规定时参照民法典（如违约金酌减、协议撤销、人格权赔偿）
 - **地方口径**：两金标准、停工留薪期目录、双赔/补差、加班费基数、医保退休年限、公积金缴存比例等省级差异，知识库内以 ※ 标注，详见 [LOCAL-PRACTICE.md](../../LOCAL-PRACTICE.md)（含官方查询渠道与回答模板）
-- **未覆盖**：民法典物权/婚姻/继承编仅交叉提及；《就业促进法》《女职工劳动保护特别规定》等尚未建模块（相关条文已交叉引用）
+- **未展开**：民法典物权/婚姻/继承编仅整理劳动关联点（见 civil-code 模块 Core Frameworks 第6点），未逐条展开
 - 每个模块的 `cheatsheet.md`（速查表/决策卡/关键数字）与 `patterns.md`（操作流程）是回答计算类与操作类问题的**首选入口**
 - **免责声明**：本知识库不构成法律意见；个案结论受证据、鉴定结论与地方实践影响，重大争议请咨询执业律师
