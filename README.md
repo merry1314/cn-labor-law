@@ -1,10 +1,10 @@
 # 中国劳动法知识库（china-labor-advisor）
 
-单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **8 部法律法规全文**的结构化知识模块（`topics/`），共 **57 个章节文件**。用户只需直接提问（"我被裁了"、"工伤了怎么办"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
+单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **9 部法律法规全文**的结构化知识模块（`topics/`），共 **59 个章节文件**。用户只需直接提问（"我被裁了"、"工伤了怎么办"、"公积金该交多少"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
 
 - **技能入口**: [china-labor-advisor/SKILL.md](china-labor-advisor/SKILL.md)
 - **生成日期**: 2026-09-26
-- **法律文本基准**: 劳动法（2018修正）、劳动合同法（2012修正）、社会保险法（2018修正）、调解仲裁法（2009）、民法典（2020）、工伤保险条例（2010修订）、年休假条例（2007）+实施办法（2008）、最高法劳动争议解释（一）（2021）+（二）（2025）
+- **法律文本基准**: 劳动法（2018修正）、劳动合同法（2012修正）、社会保险法（2018修正）、调解仲裁法（2009）、民法典（2020）、工伤保险条例（2010修订）、年休假条例（2007）+实施办法（2008）、住房公积金管理条例（2019修订）、最高法劳动争议解释（一）（2021）+（二）（2025）
 
 ---
 
@@ -21,7 +21,8 @@ china-labor-advisor/
     ├── labor-dispute-judicial-interpretations/  最高法解释一+二（8章）· 审判口径（2025最新）
     ├── civil-code/                     民法典（5章）· 协议撤销/人格权/侵权赔偿
     ├── work-injury-regulations/        工伤保险条例（4章）· 认定/伤残梯度/工亡
-    └── paid-annual-leave-regulations/  年休假条例+办法（2章）· 折算/300%补偿
+    ├── paid-annual-leave-regulations/  年休假条例+办法（2章）· 折算/300%补偿
+    └── housing-fund-regulations/       住房公积金管理条例（2章）· 缴存比例/提取/投诉
 
 每个模块目录内：INDEX.md（模块索引，原 SKILL.md）+ chapters/ + glossary.md + patterns.md + cheatsheet.md
 （china-labor-law 另含 worker-playbook.md 劳动者维权行动手册）
@@ -39,6 +40,7 @@ china-labor-advisor/
 | [civil-code](china-labor-advisor/topics/civil-code/INDEX.md) | 《民法典》1260条（2021施行） | 5 | **民事基本法**（劳动关联）：协议撤销、格式条款、人格权（性骚扰/个人信息）、用人单位责任、工伤侵权双轨 |
 | [work-injury-regulations](china-labor-advisor/topics/work-injury-regulations/INDEX.md) | 《工伤保险条例》67条（2010修订） | 4 | **行政法规**：工伤认定、48小时、伤残待遇梯度、工亡三费 |
 | [paid-annual-leave-regulations](china-labor-advisor/topics/paid-annual-leave-regulations/INDEX.md) | 年休假条例10条+实施办法19条 | 2 | **行政规章**：5/10/15天档位、两道折算、300%未休补偿 |
+| [housing-fund-regulations](china-labor-advisor/topics/housing-fund-regulations/INDEX.md) | 《住房公积金管理条例》47条（2019修订） | 2 | **行政法规**：缴存比例5%–12%、月缴存额公式、提取六情形、不缴强制执行 |
 
 ---
 
@@ -71,6 +73,7 @@ china-labor-advisor/
 | 没签劳动合同 | labor-contract-law ch02 | 解释二6–11条（二倍工资精度/免责/两连签）、民法典490条（事实合同） |
 | 竞业限制 | labor-contract-law ch02 | 解释一36–40条（30%补偿/3个月解约）、解释二13–15条、民法典585条（违约金酌减） |
 | 公司没缴社保 / 放弃社保声明 | social-insurance-law ch07 | 解释二19条（声明无效+38条解除+补缴后索回补贴） |
+| 公积金该交多少 / 不缴公积金 | housing-fund-regulations（16/18条缴存、38条强制执行） | 社保法 cheatsheet（五险比例速查：12333 vs 12329 分流） |
 | 欠薪 | china-labor-law ch05 | 解释一15条（欠条直诉）、49条（保全）、仲裁法（离职起1年） |
 | 工伤 | work-injury-regulations | 社保法 ch04、民法典 ch05（第三人侵权双轨：1179/1213条） |
 | 离职协议翻盘 | 解释一35条 | 民法典 ch01（147–152条撤销+除斥期间） |
@@ -89,7 +92,7 @@ china-labor-advisor/
       ↓ 有规定从其规定；无规定参照 ↓
   民法典（民事基本法，补充层）
       ↓ 细化标准 ↓
-  工伤保险条例 / 年休假条例+办法（行政法规/规章）
+  工伤保险条例 / 年休假条例+办法 / 住房公积金管理条例（行政法规/规章）
       ↓ 审判展开 ↓
   最高法解释（一）（二）——回答"法院实际怎么判"
 ```
@@ -102,7 +105,7 @@ china-labor-advisor/
 
 ## 原始法律文本
 
-`_sources/` 目录保存 8 部法律的全文（`.txt` 提取文本 + 原始 `.html`），是全部章节文件的**唯一事实来源**：
+`_sources/` 目录保存 9 部法律的全文（`.txt` 提取文本 + 原始 `.html`），是全部章节文件的**唯一事实来源**：
 
 | 文件 | 内容 |
 |---|---|
@@ -114,6 +117,7 @@ china-labor-advisor/
 | minfadian_full.txt | 民法典（1260条） |
 | gongshangtiaoli.txt | 工伤保险条例 |
 | nianxiujia-tiaoli.txt / nianxiujia-banfa.txt | 年休假条例 / 实施办法 |
+| gongjijin-tiaoli.txt | 住房公积金管理条例（2019修订） |
 
 ---
 
