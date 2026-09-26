@@ -64,6 +64,8 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 
 **综合入口**：[劳动者维权行动手册](topics/china-labor-law/worker-playbook.md)（从证据到执行的完整流程）。
 
+**法规原文核对**：[LEGAL-SOURCES.md](../LEGAL-SOURCES.md) — 9 部法律法规及司法解释的官方原文链接（全国人大网/中国政府网/最高人民法院），回答中引用法条时必须附上对应官方链接，便于用户核对原文。
+
 ---
 
 ## 主题索引（按知识域）
@@ -93,6 +95,37 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 解释（二） | **2025-09-01** | 与解释一冲突**以（二）为准**；解释一第32条1款（退休返聘=劳务）**已废止** |
 | 工伤保险条例 | 2004-01-01 | 2010修订（未完成认定的从新） |
 | 年休假条例/办法 | 2008-01-01 / 2008-09-18 | 公历年度 |
+
+## 回答规范（法条引用）
+
+回答用户问题时，凡涉及具体法律法规条文，**必须附上法条原文的官方链接**，以便用户核对原文、增强可信度。
+
+**引用格式**（内联，紧跟条文号）：
+
+```
+《中华人民共和国劳动合同法》第四十七条（[查看原文](http://www.npc.gov.cn/zgrdw/npc/xinwen/lfgz/zxfl/2007-06/29/content_368169.htm)）规定，经济补偿按劳动者在本单位工作的年限，每满一年支付一个月工资的标准向劳动者支付。
+```
+
+**要点**：
+
+1. **法律全称 + 条文号**：首次引用写全称（如《中华人民共和国劳动合同法》），后续可简称（如《劳动合同法》）
+2. **官方链接**：链接来自 [LEGAL-SOURCES.md](../LEGAL-SOURCES.md) 中的官方来源（全国人大网/中国政府网/最高人民法院/人社部），不得使用非官方链接
+3. **多个条文**：同一法律内的多个条文可共用一个链接，在条文号后标注；不同法律的条文分别标注各自链接
+4. **计算/标准类**：涉及金额、比例、期限等法定标准时，除标注条文链接外，还应注明数据是否为动态值（如工亡补助金、社保缴费基数等，参见 [DYNAMIC-DATA.md](../DYNAMIC-DATA.md)）
+5. **例外**：仅作背景提及、未作为结论依据的法条可不附链接；但作为结论核心依据的法条必须附链接
+
+**官方链接速查**（完整清单见 [LEGAL-SOURCES.md](../LEGAL-SOURCES.md)）：
+
+- 劳动法：http://www.npc.gov.cn/npc/c2/c30834/201905/t20190521_296651.html
+- 劳动合同法：http://www.npc.gov.cn/zgrdw/npc/xinwen/lfgz/zxfl/2007-06/29/content_368169.htm
+- 社会保险法：http://www.npc.gov.cn/zgrdw/npc/xinwen/2019-01/07/content_2070267.htm
+- 调解仲裁法：http://www.npc.gov.cn/zgrdw/npc/xinwen/lfgz/zxfl/2007-12/29/content_1387809.htm
+- 民法典：http://www.npc.gov.cn/c2/c30834/202006/t20200602_306457.html
+- 工伤保险条例：https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fg/202011/t20201103_394950.html
+- 年休假条例：https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6636.htm
+- 公积金条例：https://www.gov.cn/gongbao/content/2019/content_5468861.htm（2019版；2026年修订见 LEGAL-SOURCES.md）
+- 解释（一）：https://www.court.gov.cn/fabu/xiangqing/282121.html
+- 解释（二）：https://www.court.gov.cn/zixun/xiangqing/472691.html
 
 ## Scope & Limits
 
