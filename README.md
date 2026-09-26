@@ -144,13 +144,13 @@ china-labor-advisor/
 
 ## 原始法律文本
 
-`_sources/` 目录保存 **11 部**法律法规的提取文本（共 **12 个** `.txt` 文件，年休假含条例+办法两个文件）。15 部已建模块中，**10 部**有对应 `_sources` 原文，**5 部**（劳动法、职业病防治法、安全生产法、就业促进法、女职工劳动保护特别规定）暂无 `_sources` 原文，模块内容依据官方公开文本整理（官方链接见 [LEGAL-SOURCES.md](LEGAL-SOURCES.md)）：
+`_sources/` 目录保存 **12 部**法律法规的提取文本（共 **13 个** `.txt` 文件，年休假含条例+办法两个文件）。15 部已建模块中，**11 部**有对应 `_sources` 原文，**4 部**（职业病防治法、安全生产法、就业促进法、女职工劳动保护特别规定）暂无 `_sources` 原文，模块内容依据官方公开文本整理（官方链接见 [LEGAL-SOURCES.md](LEGAL-SOURCES.md)）：
 
 **已建模块（15 部）**：
 
 | 文件 | 内容 |
 |---|---|
-| （无 _sources） | 劳动法（2018修正） |
+| labor-law-2018.pdf / labor-law-2018.txt | 劳动法（2018修正） |
 | laodonghetongfa.txt | 劳动合同法 |
 | shehuibaoxianfa.txt | 社会保险法 |
 | tiaojiezhongcaifa.txt | 劳动争议调解仲裁法 |
