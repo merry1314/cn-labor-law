@@ -13,7 +13,7 @@
 ```
 china-labor-advisor/
 ├── SKILL.md                    ← 技能入口：场景路由表 + 法条定位表 + 主题索引
-└── topics/                     ← 9 个法律知识模块（每个 = INDEX.md + chapters/ + 支撑文件：glossary/patterns/cheatsheet；china-labor-law 另含 worker-playbook）
+└── topics/                     ← 13 个法律知识模块（每个 = INDEX.md + chapters/ + 支撑文件：glossary/patterns/cheatsheet；china-labor-law 另含 worker-playbook）
     ├── china-labor-law/                劳动法（13章）· 框架法 + 劳动者维权行动手册
     ├── labor-contract-law/             劳动合同法（8章）· 合同/解除/N与2N/派遣
     ├── social-insurance-law/           社会保险法（12章）· 五险/征缴/待遇
@@ -23,6 +23,10 @@ china-labor-advisor/
     ├── work-injury-regulations/        工伤保险条例（4章）· 认定/伤残梯度/工亡
     ├── paid-annual-leave-regulations/  年休假条例+办法（2章）· 折算/300%补偿
     ├── housing-fund-regulations/       住房公积金管理条例（2章）· 缴存比例/提取/投诉
+    ├── migrant-worker-wage-regulations/  保障农民工工资支付条例（6章）· 工资支付/清偿/工程建设制度
+    ├── labor-inspection-regulations/   劳动保障监察条例（3章）· 监察职责/调查/加付赔偿
+    ├── occupational-disease-prevention-law/  职业病防治法（6章）· 预防/健康检查/诊断鉴定
+    ├── work-safety-law/                安全生产法（6章）· 安全义务/从业人员权利/事故处罚
     └── policy-review/                  规章制度合规审查（应用层）· 四步流程+10主题红牌库
 
 每个模块目录内：INDEX.md（模块索引，原 SKILL.md）+ chapters/ + glossary.md + patterns.md + cheatsheet.md
@@ -119,11 +123,11 @@ china-labor-advisor/
 
 ```
 特别法优先：
-  劳动法 / 劳动合同法 / 社会保险法 / 调解仲裁法（特别法）
+  劳动法 / 劳动合同法 / 社会保险法 / 调解仲裁法 / 职业病防治法 / 安全生产法（法律·特别法）
       ↓ 有规定从其规定；无规定参照 ↓
   民法典（民事基本法，补充层）
       ↓ 细化标准 ↓
-  工伤保险条例 / 年休假条例+办法 / 住房公积金管理条例（行政法规/规章）
+  工伤保险条例 / 年休假条例+办法 / 住房公积金管理条例 / 保障农民工工资支付条例 / 劳动保障监察条例（行政法规）
       ↓ 审判展开 ↓
   最高法解释（一）（二）——回答"法院实际怎么判"
 ```
@@ -136,13 +140,13 @@ china-labor-advisor/
 
 ## 原始法律文本
 
-`_sources/` 目录保存 **12 个**法律文本（`.txt` 提取文本 + 原始 `.html`）。其中 **11 部**已建成知识模块，**1 部**（民法典，已建模块但源文件为拆分 HTML）：
+`_sources/` 目录保存 **11 部**法律法规的提取文本（共 **12 个** `.txt` 文件，年休假含条例+办法两个文件）。13 部已建模块中，**10 部**有对应 `_sources` 原文，**3 部**（劳动法、职业病防治法、安全生产法）暂无 `_sources` 原文，模块内容依据官方公开文本整理（官方链接见 [LEGAL-SOURCES.md](LEGAL-SOURCES.md)）：
 
 **已建模块（13 部）**：
 
 | 文件 | 内容 |
 |---|---|
-| labor-law-2018.pdf / .txt | 劳动法（原书 PDF+提取） |
+| （无 _sources） | 劳动法（2018修正） |
 | laodonghetongfa.txt | 劳动合同法 |
 | shehuibaoxianfa.txt | 社会保险法 |
 | tiaojiezhongcaifa.txt | 劳动争议调解仲裁法 |
