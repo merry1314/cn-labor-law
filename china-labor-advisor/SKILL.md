@@ -31,7 +31,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 欠薪/克扣/拖欠工资 | [劳动法](topics/china-labor-law/INDEX.md) ch05 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch01（15条欠条直诉）、ch04（49条保全）、[仲裁法](topics/labor-dispute-arbitration-law/INDEX.md)（离职起1年） |
 | 加班费 | [劳动法](topics/china-labor-law/INDEX.md) ch04 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch04（42条两步举证） |
 | 公司没缴社保 / 签了放弃社保声明 | [社保法](topics/social-insurance-law/INDEX.md) ch07 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch08（19条声明无效+解除补偿） |
-| 公积金该交多少 / 单位不缴公积金 | [公积金条例](topics/housing-fund-regulations/INDEX.md) ch01（16、18条缴存公式与比例） | ch02（37、38条投诉与强制执行）、[社保法 cheatsheet](topics/social-insurance-law/cheatsheet.md)（五险比例速查） |
+| 公积金该交多少 / 单位不缴公积金 | [公积金条例](topics/housing-fund-regulations/INDEX.md) ch01（16、18条缴存公式与比例） | ch02（39、40条投诉与强制执行）、[社保法 cheatsheet](topics/social-insurance-law/cheatsheet.md)（五险比例速查） |
 | 审查公司规章制度 / 员工手册合不合法 | [规章制度审查](topics/policy-review/INDEX.md)（四步审查流程+10主题红牌库） | 五级定级报告（🔴违法/🟠损害权益/🟡程序风险/🔵欠佳/🟢合规），逐条给法律依据与应对 |
 | 工伤（受伤了/认定/待遇/赔偿） | [工伤条例](topics/work-injury-regulations/INDEX.md) ch02–ch03 | [社保法](topics/social-insurance-law/INDEX.md) ch04、[民法典](topics/civil-code/INDEX.md) ch05（第三人侵权双轨） |
 | 上下班途中车祸 | [工伤条例](topics/work-injury-regulations/INDEX.md) ch02（14条六+举证包） | [民法典](topics/civil-code/INDEX.md) ch05（1213条保险顺序）、[劳动法](topics/china-labor-law/INDEX.md) ch04 |
@@ -56,7 +56,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 劳动法（第1–107条） | [topics/china-labor-law](topics/china-labor-law/INDEX.md) — 13章逐章对照 |
 | 劳动合同法（第1–98条） | [topics/labor-contract-law](topics/labor-contract-law/INDEX.md) — 8章 |
 | 社会保险法（第1–98条） | [topics/social-insurance-law](topics/social-insurance-law/INDEX.md) — 12章 |
-| 住房公积金管理条例（7章47条） | [topics/housing-fund-regulations](topics/housing-fund-regulations/INDEX.md) — 2章 |
+| 住房公积金管理条例（7章50条） | [topics/housing-fund-regulations](topics/housing-fund-regulations/INDEX.md) — 2章 |
 | 规章制度合规审查（应用层，10主题红牌库） | [topics/policy-review](topics/policy-review/INDEX.md) — review-guides |
 | 劳动争议调解仲裁法 | [topics/labor-dispute-arbitration-law](topics/labor-dispute-arbitration-law/INDEX.md) — 5章 |
 | 最高法解释（一）54条/（二）21条 | [topics/labor-dispute-judicial-interpretations](topics/labor-dispute-judicial-interpretations/INDEX.md) — 8章 |
@@ -90,7 +90,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 民事基础 | civil-code | 协议效力与撤销、格式条款、3年时效、人格权（性骚扰/隐私/个人信息）、侵权赔偿 |
 | 工伤保险 | work-injury-regulations | 认定三明治、48小时、鉴定十级、停工留薪、待遇梯度、工亡三费、未参保自付 |
 | 休息休假 | paid-annual-leave-regulations | 5/10/15天、折算公式、300%补偿、书面放弃、派遣年假 |
-| 住房公积金 | housing-fund-regulations | 缴存比例5%–12%、月缴存额公式、提取六情形、不缴强制执行 |
+| 住房公积金 | housing-fund-regulations | 缴存比例5%–国家最高比例、月缴存额公式、提取九情形、不缴强制执行、骗提骗贷罚则 |
 
 ## 版本与时点规则
 
@@ -133,7 +133,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 - 民法典：http://www.npc.gov.cn/c2/c30834/202006/t20200602_306457.html
 - 工伤保险条例：https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fg/202011/t20201103_394950.html
 - 年休假条例：https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6636.htm
-- 公积金条例：https://www.gov.cn/gongbao/content/2019/content_5468861.htm（2019版；2026年修订见 LEGAL-SOURCES.md）
+- 公积金条例：https://www.gov.cn/zhengce/content/202608/content_7078477.htm（国令第844号，2026第三次修订，2026-09-20施行）
 - 解释（一）：https://www.court.gov.cn/fabu/xiangqing/282121.html
 - 解释（二）：https://www.court.gov.cn/zixun/xiangqing/472691.html
 

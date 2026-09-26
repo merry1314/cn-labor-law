@@ -47,7 +47,7 @@ china-labor-advisor/
 | [civil-code](china-labor-advisor/topics/civil-code/INDEX.md) | 《民法典》1260条（2021施行） | 5 | **民事基本法**（劳动关联）：协议撤销、格式条款、人格权（性骚扰/个人信息）、用人单位责任、工伤侵权双轨 |
 | [work-injury-regulations](china-labor-advisor/topics/work-injury-regulations/INDEX.md) | 《工伤保险条例》67条（2010修订） | 4 | **行政法规**：工伤认定、48小时、伤残待遇梯度、工亡三费 |
 | [paid-annual-leave-regulations](china-labor-advisor/topics/paid-annual-leave-regulations/INDEX.md) | 年休假条例10条+实施办法19条 | 2 | **行政规章**：5/10/15天档位、两道折算、300%未休补偿 |
-| [housing-fund-regulations](china-labor-advisor/topics/housing-fund-regulations/INDEX.md) | 《住房公积金管理条例》47条（2019修订） | 2 | **行政法规**：缴存比例5%–12%、月缴存额公式、提取六情形、不缴强制执行 |
+| [housing-fund-regulations](china-labor-advisor/topics/housing-fund-regulations/INDEX.md) | 《住房公积金管理条例》50条（2026第三次修订，国令第844号） | 2 | **行政法规**：缴存比例5%–国家最高比例、月缴存额公式、提取九情形、不缴强制执行、骗提骗贷罚则 |
 | [migrant-worker-wage-regulations](china-labor-advisor/topics/migrant-worker-wage-regulations/INDEX.md) | 《保障农民工工资支付条例》64条（2020施行） | 6 | **行政法规**：工资支付形式、清偿责任链、工程建设五项制度、失信惩戒、拒不支付劳动报酬罪移送 |
 | [labor-inspection-regulations](china-labor-advisor/topics/labor-inspection-regulations/INDEX.md) | 《劳动保障监察条例》36条（2004施行） | 3 | **行政法规**：监察职责、管辖分工、调查程序、拖欠工资加付50%–100%、违法工时罚款 |
 | [occupational-disease-prevention-law](china-labor-advisor/topics/occupational-disease-prevention-law/INDEX.md) | 《职业病防治法》87条（2018修正） | 6 | **法律**：前期预防三同时、职业健康检查、职业病诊断鉴定、工伤+民事赔偿 |
@@ -112,7 +112,7 @@ china-labor-advisor/
 | 没签劳动合同 | labor-contract-law ch02 | 解释二6–11条（二倍工资精度/免责/两连签）、民法典490条（事实合同） |
 | 竞业限制 | labor-contract-law ch02 | 解释一36–40条（30%补偿/3个月解约）、解释二13–15条、民法典585条（违约金酌减） |
 | 公司没缴社保 / 放弃社保声明 | social-insurance-law ch07 | 解释二19条（声明无效+38条解除+补缴后索回补贴） |
-| 公积金该交多少 / 不缴公积金 | housing-fund-regulations（16/18条缴存、38条强制执行） | 社保法 cheatsheet（五险比例速查：12333 vs 12329 分流） |
+| 公积金该交多少 / 不缴公积金 | housing-fund-regulations（16/18条缴存、40条强制执行） | 社保法 cheatsheet（五险比例速查：12333 vs 12329 分流） |
 | 欠薪 | china-labor-law ch05 | 解释一15条（欠条直诉）、49条（保全）、仲裁法（离职起1年） |
 | 工伤 | work-injury-regulations | 社保法 ch04、民法典 ch05（第三人侵权双轨：1179/1213条） |
 | 离职协议翻盘 | 解释一35条 | 民法典 ch01（147–152条撤销+除斥期间） |
@@ -158,7 +158,7 @@ china-labor-advisor/
 | minfadian_full.txt | 民法典（1260条） |
 | gongshangtiaoli.txt | 工伤保险条例 |
 | nianxiujia-tiaoli.txt / nianxiujia-banfa.txt | 年休假条例 / 实施办法 |
-| gongjijin-tiaoli.txt | 住房公积金管理条例（2019修订） |
+| gongjijin-tiaoli.txt | 住房公积金管理条例（2026第三次修订，国令第844号，50条） |
 | nongminggong-tiaoli.txt | 保障农民工工资支付条例 |
 | jiancaitiaoli.txt | 劳动保障监察条例 |
 | zhiyebingfangzhifa.txt | 职业病防治法（2018修正） |
