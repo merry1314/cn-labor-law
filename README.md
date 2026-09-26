@@ -144,7 +144,7 @@ china-labor-advisor/
 
 ## 原始法律文本
 
-`_sources/` 目录保存 **12 部**法律法规的提取文本（共 **13 个** `.txt` 文件，年休假含条例+办法两个文件）。15 部已建模块中，**11 部**有对应 `_sources` 原文，**4 部**（职业病防治法、安全生产法、就业促进法、女职工劳动保护特别规定）暂无 `_sources` 原文，模块内容依据官方公开文本整理（官方链接见 [LEGAL-SOURCES.md](LEGAL-SOURCES.md)）：
+`_sources/` 目录保存 **15 部**法律法规的提取文本（共 **17 个** `.txt` 文件，年休假含条例+办法两个文件）。15 部已建模块**全部**有对应 `_sources` 原文：
 
 **已建模块（15 部）**：
 
@@ -161,10 +161,10 @@ china-labor-advisor/
 | gongjijin-tiaoli.txt | 住房公积金管理条例（2019修订） |
 | nongminggong-tiaoli.txt | 保障农民工工资支付条例 |
 | jiancaitiaoli.txt | 劳动保障监察条例 |
-| （无 _sources） | 职业病防治法（2018修正） |
-| （无 _sources） | 安全生产法（2021修正） |
-| （无 _sources） | 就业促进法（2015修正） |
-| （无 _sources） | 女职工劳动保护特别规定（2012） |
+| zhiyebingfangzhifa.txt | 职业病防治法（2018修正） |
+| anquanshengchanfa.txt | 安全生产法（2021修正） |
+| jiuyecujinfa.txt | 就业促进法（2015修正） |
+| nvzhigong-tiaoli.txt | 女职工劳动保护特别规定（2012） |
 
 ---
 
