@@ -1,0 +1,16 @@
+# 设计文档（本地留存，不入库）
+docs/
+*.design.md
+DESIGN.md
+
+# 编辑器与系统文件
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# 临时与日志
+*.log
+*.tmp
+tmp/
