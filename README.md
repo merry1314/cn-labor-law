@@ -13,7 +13,7 @@
 ```
 china-labor-advisor/
 ├── SKILL.md                    ← 技能入口：场景路由表 + 法条定位表 + 主题索引
-└── topics/                     ← 8 个法律知识模块（每个 = INDEX.md + chapters/ + 3 支撑文件）
+└── topics/                     ← 9 个法律知识模块（每个 = INDEX.md + chapters/ + 支撑文件：glossary/patterns/cheatsheet；china-labor-law 另含 worker-playbook）
     ├── china-labor-law/                劳动法（13章）· 框架法 + 劳动者维权行动手册
     ├── labor-contract-law/             劳动合同法（8章）· 合同/解除/N与2N/派遣
     ├── social-insurance-law/           社会保险法（12章）· 五险/征缴/待遇
@@ -29,7 +29,7 @@ china-labor-advisor/
 （china-labor-law 另含 worker-playbook.md 劳动者维权行动手册）
 ```
 
-## 8 个知识模块
+## 9 个知识模块 + 1 个应用模块
 
 | 模块 | 法律依据 | 章节 | 职责 |
 |---|---|---|---|
@@ -85,7 +85,7 @@ china-labor-advisor/
 
 **模块内文件分工**：
 - `INDEX.md` — 模块索引：核心框架 + 章节索引 + 主题索引 + 适用边界
-- `chapters/chXX-*.md` — 逐章精读：Core Idea / Frameworks / Anti-patterns / Worked Example / Takeaways
+- `chapters/chXX-*.md` — 逐章精读：Core Idea / Frameworks / Key Concepts / Mental Models / Anti-patterns / Worked Example / Key Takeaways / Connects To
 - `glossary.md` — 术语表（按条文）
 - `patterns.md` — 审查方法与决策流程（"遇到X怎么操作"）
 - `cheatsheet.md` — 速查表、决策卡、关键数字卡、高频误判卡
@@ -163,7 +163,7 @@ china-labor-advisor/
 
 **已知边界**：
 - **地方口径**：两金标准（工伤医疗/就业补助金）、停工留薪期目录、双赔/补差、加班费基数细则、社保公积金具体费率等以**省级规定与受诉法院口径**为准（知识库内以 ※ 标注）
-- **动态数据**：一次性工亡补助金（20倍×上年度城镇居民人均可支配收入）等逐年更新的标准，文中已列近年数值（2024–2026年度），使用时以人社部当年公布为准
+- **动态数据**：一次性工亡补助金（20倍×上年度城镇居民人均可支配收入）等逐年更新的标准，文中已列近年度参考值，**数据基准日 2026-09-26**；所有动态数据点的更新位置与方法见 [DYNAMIC-DATA.md](DYNAMIC-DATA.md)，使用时以国家统计局/人社部当年公布为准
 - **未展开**：《职业病防治法》《安全生产法》等未建模块（相关条文已交叉引用）；民法典物权/婚姻/继承编仅交叉提及
 - **时效性**：生成于 2026-09-26，此后新司法解释/修订以官方文本为准
 
