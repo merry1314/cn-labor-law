@@ -7,7 +7,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 
 # 中国劳动法顾问（china-labor-advisor）
 
-**知识库**: 9 部法律法规全文结构化（劳动法/劳动合同法/社会保险法/调解仲裁法/最高法解释一+二/民法典/工伤保险条例/年休假条例+办法/住房公积金管理条例），共 59 章节文件 | **基准日**: 2026-09-26
+**知识库**: 13 部法律法规全文结构化（劳动法/劳动合同法/社会保险法/调解仲裁法/最高法解释一+二/民法典/工伤保险条例/年休假条例+办法/住房公积金管理条例/保障农民工工资支付条例/劳动保障监察条例/职业病防治法/安全生产法），共 80 章节文件 | **基准日**: 2026-09-26
 
 ## How to Use This Skill
 
@@ -61,10 +61,14 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 民法典（1260条，劳动关联） | [topics/civil-code](topics/civil-code/INDEX.md) — 5章 |
 | 工伤保险条例（67条） | [topics/work-injury-regulations](topics/work-injury-regulations/INDEX.md) — 4章 |
 | 年休假条例+实施办法 | [topics/paid-annual-leave-regulations](topics/paid-annual-leave-regulations/INDEX.md) — 2章 |
+| 保障农民工工资支付条例（64条） | [topics/migrant-worker-wage-regulations](topics/migrant-worker-wage-regulations/INDEX.md) — 6章 |
+| 劳动保障监察条例（36条） | [topics/labor-inspection-regulations](topics/labor-inspection-regulations/INDEX.md) — 3章 |
+| 职业病防治法（87条） | [topics/occupational-disease-prevention-law](topics/occupational-disease-prevention-law/INDEX.md) — 6章 |
+| 安全生产法（119条） | [topics/work-safety-law](topics/work-safety-law/INDEX.md) — 6章 |
 
 **综合入口**：[劳动者维权行动手册](topics/china-labor-law/worker-playbook.md)（从证据到执行的完整流程）。
 
-**法规原文核对**：[LEGAL-SOURCES.md](../LEGAL-SOURCES.md) — 9 部法律法规及司法解释的官方原文链接（全国人大网/中国政府网/最高人民法院），回答中引用法条时必须附上对应官方链接，便于用户核对原文。
+**法规原文核对**：[LEGAL-SOURCES.md](../LEGAL-SOURCES.md) — 13 部法律法规及司法解释的官方原文链接（全国人大网/中国政府网/最高人民法院），回答中引用法条时必须附上对应官方链接，便于用户核对原文。
 
 ---
 
@@ -130,7 +134,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 ## Scope & Limits
 
 - **特别法优先**：劳动法律体系（劳动法/劳动合同法/社保法/仲裁法）优先于民法典；特别法无规定时参照民法典（如违约金酌减、协议撤销、人格权赔偿）
-- **地方口径**：两金标准、停工留薪期目录、双赔/补差等以**省级规定与受诉法院口径**为准（知识库内以 ※ 标注）
-- **未覆盖**：《职业病防治法》《安全生产法》等未建模块（相关条文已交叉引用）；民法典物权/婚姻/继承编仅交叉提及
+- **地方口径**：两金标准、停工留薪期目录、双赔/补差、加班费基数、医保退休年限、公积金缴存比例等省级差异，知识库内以 ※ 标注，详见 [LOCAL-PRACTICE.md](../../LOCAL-PRACTICE.md)（含官方查询渠道与回答模板）
+- **未覆盖**：民法典物权/婚姻/继承编仅交叉提及；《就业促进法》《女职工劳动保护特别规定》等尚未建模块（相关条文已交叉引用）
 - 每个模块的 `cheatsheet.md`（速查表/决策卡/关键数字）与 `patterns.md`（操作流程）是回答计算类与操作类问题的**首选入口**
 - **免责声明**：本知识库不构成法律意见；个案结论受证据、鉴定结论与地方实践影响，重大争议请咨询执业律师

@@ -3,10 +3,10 @@
 // 用法：go run consistency-check.go
 //
 // 校验项（规则级，非特定缺陷硬编码）：
-//  1. 模块总数 = 9 法律模块 + 1 policy-review = 10
-//  2. 章节总数 = 59，各模块章节数匹配
+//  1. 模块总数 = 13 法律模块 + 1 policy-review = 14
+//  2. 章节总数 = 80，各模块章节数匹配
 //  3. 每个法律模块含 INDEX.md + chapters/ + glossary.md + patterns.md + cheatsheet.md
-//  4. SKILL.md 与 README.md 头部统计口径一致（9 部 / 59 章）
+//  4. SKILL.md 与 README.md 头部统计口径一致（13 部 / 80 章）
 //  5. 工亡补助金动态数据 3 处均含「数据基准日」标记
 //  6. DYNAMIC-DATA 表格算术一致性：适用年度=收入年度+1，补助金=收入×20
 //  7. 通用路由校验：所有 模块/chNN 引用的章节文件必须存在
@@ -35,7 +35,7 @@ const (
 	readmePath = "README.md"
 )
 
-// 9 个法律知识模块
+// 13 个法律知识模块
 var lawModules = []string{
 	"china-labor-law",
 	"labor-contract-law",
@@ -46,6 +46,10 @@ var lawModules = []string{
 	"work-injury-regulations",
 	"paid-annual-leave-regulations",
 	"housing-fund-regulations",
+	"migrant-worker-wage-regulations",
+	"labor-inspection-regulations",
+	"occupational-disease-prevention-law",
+	"work-safety-law",
 }
 
 // 每个模块预期章节数
@@ -59,28 +63,38 @@ var expectedChapters = map[string]int{
 	"work-injury-regulations":                4,
 	"paid-annual-leave-regulations":          2,
 	"housing-fund-regulations":               2,
+	"migrant-worker-wage-regulations":        6,
+	"labor-inspection-regulations":           3,
+	"occupational-disease-prevention-law":    6,
+	"work-safety-law":                        6,
 }
 
 // 各法律条文数上限（用于法条号越界扫描）
 var articleLimits = map[string]int{
-	"劳动法":       107,
-	"劳动合同法":     98,
-	"社会保险法":     98,
-	"调解仲裁法":     54,
-	"劳动争议调解仲裁法": 54,
-	"民法典":       1260,
-	"工伤保险条例":    67,
-	"年休假条例":     10,
-	"年休假实施办法":   19,
-	"公积金条例":     53,
-	"住房公积金管理条例": 53,
-	"解释一":       54,
-	"解释二":       21,
+	"劳动法":         107,
+	"劳动合同法":       98,
+	"社会保险法":       98,
+	"调解仲裁法":       54,
+	"劳动争议调解仲裁法":   54,
+	"民法典":         1260,
+	"工伤保险条例":      67,
+	"年休假条例":       10,
+	"年休假实施办法":     19,
+	"公积金条例":       53,
+	"住房公积金管理条例":   53,
+	"解释一":         54,
+	"解释二":         21,
+	"农民工工资条例":     64,
+	"保障农民工工资支付条例": 64,
+	"劳动监察条例":      36,
+	"劳动保障监察条例":    36,
+	"职业病防治法":      87,
+	"安全生产法":       119,
 }
 
 const (
-	expectedLawModules    = 9
-	expectedTotalChapters = 59
+	expectedLawModules    = 13
+	expectedTotalChapters = 80
 )
 
 type check struct {
@@ -128,7 +142,7 @@ func main() {
 
 // 1. 模块总数校验
 func checkModuleCount() check {
-	c := check{name: "模块总数 = 9 法律模块 + 1 policy-review"}
+	c := check{name: "模块总数 = 13 法律模块 + 1 policy-review"}
 
 	entries, err := os.ReadDir(topicsDir)
 	if err != nil {
@@ -155,7 +169,7 @@ func checkModuleCount() check {
 
 // 2. 章节总数校验
 func checkChapterCount() check {
-	c := check{name: "章节总数 = 59"}
+	c := check{name: "章节总数 = 80"}
 
 	total := 0
 	for _, mod := range lawModules {
@@ -249,7 +263,7 @@ func checkModuleFiles() check {
 
 // 4. SKILL.md 与 README.md 口径一致性
 func checkSkillReadmeConsistency() check {
-	c := check{name: "SKILL.md / README.md 头部统计口径一致（9 部 / 59 章）"}
+	c := check{name: "SKILL.md / README.md 头部统计口径一致（13 部 / 80 章）"}
 
 	skill, err := os.ReadFile(skillPath)
 	if err != nil {
@@ -267,35 +281,35 @@ func checkSkillReadmeConsistency() check {
 	skillStr := string(skill)
 	readmeStr := string(readme)
 
-	reSkill9 := regexp.MustCompile(`9 部法律法规`)
-	reSkill59 := regexp.MustCompile(`59 章节文件`)
+	reSkill9 := regexp.MustCompile(`13 部法律法规`)
+	reSkill59 := regexp.MustCompile(`80 章节文件`)
 	if !reSkill9.MatchString(skillStr) {
 		c.ok = false
-		c.msg = "SKILL.md 未找到 \"9 部法律法规\""
+		c.msg = "SKILL.md 未找到 \"13 部法律法规\""
 		return c
 	}
 	if !reSkill59.MatchString(skillStr) {
 		c.ok = false
-		c.msg = "SKILL.md 未找到 \"59 章节文件\""
+		c.msg = "SKILL.md 未找到 \"80 章节文件\""
 		return c
 	}
 
-	reReadme9 := regexp.MustCompile(`9 部法律法规`)
-	reReadme59 := regexp.MustCompile(`59 个章节文件`)
+	reReadme9 := regexp.MustCompile(`13 部法律法规`)
+	reReadme59 := regexp.MustCompile(`80 个章节文件`)
 	if !reReadme9.MatchString(readmeStr) {
 		c.ok = false
-		c.msg = "README.md 未找到 \"9 部法律法规\""
+		c.msg = "README.md 未找到 \"13 部法律法规\""
 		return c
 	}
 	if !reReadme59.MatchString(readmeStr) {
 		c.ok = false
-		c.msg = "README.md 未找到 \"59 个章节文件\""
+		c.msg = "README.md 未找到 \"80 个章节文件\""
 		return c
 	}
 
-	if strings.Contains(skillStr, "8 部法律法规") || strings.Contains(skillStr, "57 章节") {
+	if strings.Contains(skillStr, "9 部法律法规") || strings.Contains(skillStr, "59 章节") {
 		c.ok = false
-		c.msg = "SKILL.md 仍含旧口径 \"8 部\" 或 \"57 章节\""
+		c.msg = "SKILL.md 仍含旧口径 \"9 部\" 或 \"59 章节\""
 		return c
 	}
 
