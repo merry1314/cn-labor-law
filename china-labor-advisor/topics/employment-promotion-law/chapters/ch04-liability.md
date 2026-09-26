@@ -75,6 +75,6 @@
 
 ## Connects To
 
-- [labor-dispute-arbitration-law](../labor-dispute-arbitration-law/INDEX.md) — 一般劳动争议仲裁程序（就业歧视不适用仲裁前置）
-- [civil-code](../civil-code/INDEX.md) ch04/ch05 — 人格权（第109、990条）、精神损害赔偿（第1183条）
-- [labor-contract-law](../labor-contract-law/INDEX.md) — 第9条禁止扣证件/收押金
+- [labor-dispute-arbitration-law](../../labor-dispute-arbitration-law/INDEX.md) — 一般劳动争议仲裁程序（就业歧视不适用仲裁前置）
+- [civil-code](../../civil-code/INDEX.md) ch04/ch05 — 人格权（第109、990条）、精神损害赔偿（第1183条）
+- [labor-contract-law](../../labor-contract-law/INDEX.md) — 第9条禁止扣证件/收押金

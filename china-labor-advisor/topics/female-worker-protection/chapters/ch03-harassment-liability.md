@@ -92,6 +92,6 @@
 
 ## Connects To
 
-- [civil-code](../civil-code/INDEX.md) ch04 — 性骚扰（第1010条）、人格权保护
-- [labor-contract-law](../labor-contract-law/INDEX.md) ch04 — 第38条被迫解除、经济补偿
-- [labor-inspection-regulations](../labor-inspection-regulations/INDEX.md) — 劳动保障监察投诉处理
+- [civil-code](../../civil-code/INDEX.md) ch04 — 性骚扰（第1010条）、人格权保护
+- [labor-contract-law](../../labor-contract-law/INDEX.md) ch04 — 第38条被迫解除、经济补偿
+- [labor-inspection-regulations](../../labor-inspection-regulations/INDEX.md) — 劳动保障监察投诉处理

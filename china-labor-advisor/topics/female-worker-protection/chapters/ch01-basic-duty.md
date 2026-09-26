@@ -83,5 +83,5 @@
 
 ## Connects To
 
-- [labor-contract-law](../labor-contract-law/INDEX.md) ch04 — 第42条（三期解除禁令）、第45条（顺延）、第39条（过失性解除）
-- [china-labor-law](../china-labor-law/INDEX.md) ch07 — 女职工特殊保护（劳动法第58–63条）
+- [labor-contract-law](../../labor-contract-law/INDEX.md) ch04 — 第42条（三期解除禁令）、第45条（顺延）、第39条（过失性解除）
+- [china-labor-law](../../china-labor-law/INDEX.md) ch07 — 女职工特殊保护（劳动法第58–63条）

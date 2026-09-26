@@ -78,6 +78,6 @@
 
 ## Connects To
 
-- [labor-contract-law](../labor-contract-law/INDEX.md) — 第9条禁止扣证件/收押金；第22条专项培训与服务期
-- [china-labor-law](../china-labor-law/INDEX.md) ch08 — 职业培训（劳动法第66–69条）
-- [social-insurance-law](../social-insurance-law/INDEX.md) — 失业保险与职业培训补贴
+- [labor-contract-law](../../labor-contract-law/INDEX.md) — 第9条禁止扣证件/收押金；第22条专项培训与服务期
+- [china-labor-law](../../china-labor-law/INDEX.md) ch08 — 职业培训（劳动法第66–69条）
+- [social-insurance-law](../../social-insurance-law/INDEX.md) — 失业保险与职业培训补贴

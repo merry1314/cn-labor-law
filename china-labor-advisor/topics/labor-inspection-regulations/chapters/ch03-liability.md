@@ -36,4 +36,4 @@
 
 ## Connects To
 - [ch02](ch02-procedure.md)：调查处理程序
-- [migrant-worker-wage-regulations](../migrant-worker-wage-regulations/INDEX.md)：农民工工资支付特别规定
+- [migrant-worker-wage-regulations](../../migrant-worker-wage-regulations/INDEX.md)：农民工工资支付特别规定

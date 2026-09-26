@@ -72,6 +72,6 @@
 
 ## Connects To
 
-- [social-insurance-law](../social-insurance-law/INDEX.md) — 失业保险金、职业培训补贴
-- [china-labor-law](../china-labor-law/INDEX.md) ch07 — 特殊保护（残疾人、女职工等）
-- [LOCAL-PRACTICE.md](../../LOCAL-PRACTICE.md) — 就业困难人员范围、残疾人比例、补贴标准等地方口径
+- [social-insurance-law](../../social-insurance-law/INDEX.md) — 失业保险金、职业培训补贴
+- [china-labor-law](../../china-labor-law/INDEX.md) ch07 — 特殊保护（残疾人、女职工等）
+- [LOCAL-PRACTICE.md](../../../../LOCAL-PRACTICE.md) — 就业困难人员范围、残疾人比例、补贴标准等地方口径

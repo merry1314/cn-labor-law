@@ -94,6 +94,6 @@
 
 ## Connects To
 
-- [social-insurance-law](../social-insurance-law/INDEX.md) ch06 — 生育保险（参保、待遇、申领）
-- [labor-contract-law](../labor-contract-law/INDEX.md) ch04 — 第42、45条三期解除禁令与顺延
-- [LOCAL-PRACTICE.md](../../LOCAL-PRACTICE.md) — 各省奖励假天数、生育津贴差额补足规则
+- [social-insurance-law](../../social-insurance-law/INDEX.md) ch06 — 生育保险（参保、待遇、申领）
+- [labor-contract-law](../../labor-contract-law/INDEX.md) ch04 — 第42、45条三期解除禁令与顺延
+- [LOCAL-PRACTICE.md](../../../../LOCAL-PRACTICE.md) — 各省奖励假天数、生育津贴差额补足规则

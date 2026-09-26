@@ -75,6 +75,6 @@
 
 ## Connects To
 
-- [labor-contract-law](../labor-contract-law/INDEX.md) — 劳动合同订立环节的权利（第8条用人单位告知义务）
-- [civil-code](../civil-code/INDEX.md) ch04 — 人格权编：一般人格权（第109、990条）、精神损害赔偿（第1183条）
-- [LOCAL-PRACTICE.md](../../LOCAL-PRACTICE.md) — 残疾人按比例就业的省级具体比例
+- [labor-contract-law](../../labor-contract-law/INDEX.md) — 劳动合同订立环节的权利（第8条用人单位告知义务）
+- [civil-code](../../civil-code/INDEX.md) ch04 — 人格权编：一般人格权（第109、990条）、精神损害赔偿（第1183条）
+- [LOCAL-PRACTICE.md](../../../../LOCAL-PRACTICE.md) — 残疾人按比例就业的省级具体比例
