@@ -16,7 +16,7 @@
 | 中华人民共和国安全生产法 | 2021年6月10日修正 | [中国人大网](http://www.npc.gov.cn/npc/c30834/202106/t20210611_305067.html) |
 | 中华人民共和国就业促进法 | 2015年4月24日修正 | [中国人大网](https://www.gov.cn/guoqing/2021-10/29/content_5647636.htm) |
 | 中华人民共和国残疾人保障法 | 2008年4月24日修订，2018年10月26日修正 | [中国政府网](https://www.gov.cn/guoqing/2021-10/29/content_5647618.htm) |
-| 中华人民共和国工会法 | 1992年通过，2021年12月24日第三次修正，2022-01-01施行 | [人社部](https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fl/202011/t20201102_394624.html) |
+| 中华人民共和国工会法 | 1992年通过，2021年12月24日第三次修正，2022-01-01施行 | [全国人大网（2021修正决定）](http://www.npc.gov.cn/npc/c2/c30834/202112/t20211224_315597.html) |
 
 ## 行政法规（国务院制定）
 
@@ -25,8 +25,8 @@
 | 工伤保险条例 | 2003年公布，2010年12月20日修订 | [人社部](https://www.mohrss.gov.cn/xxgk2020/fdzdgknr/zcfg/fg/202011/t20201103_394950.html) |
 | 职工带薪年休假条例 | 2007年12月14日公布，2008-01-01施行 | [中国政府网](https://www.gov.cn/zhengce/zhengceku/2008-03/28/content_6636.htm) |
 | 住房公积金管理条例 | 1999年公布，2002年、2019年修订；**2026年8月10日第三次修订（国令第844号），2026-09-20施行** | [2026修订版全文（中国政府网）](https://www.gov.cn/zhengce/content/202608/content_7078477.htm) ／ [2019版全文](https://www.gov.cn/gongbao/content/2019/content_5468861.htm) |
-| 保障农民工工资支付条例 | 国务院令第724号，2020-05-01施行 | [中国政府网](https://www.gov.cn/zhengce/content/2020-01/07/content_5467555.htm) |
-| 劳动保障监察条例 | 国务院令第423号，2004-12-01施行 | [中国政府网](https://www.gov.cn/zhengce/content/2008-03/28/content_9286.htm) |
+| 保障农民工工资支付条例 | 国务院令第724号，2020-05-01施行 | [国务院公报（中国政府网）](https://www.gov.cn/gongbao/content/2020/content_5469641.htm) |
+| 劳动保障监察条例 | 国务院令第423号，2004-12-01施行 | [国务院公报（中国政府网）](https://www.gov.cn/gongbao/content/2004/content_63042.htm) |
 | 女职工劳动保护特别规定 | 国务院令第619号，2012-04-28施行 | [中国政府网](https://www.gov.cn/gongbao/content/2012/content_2136749.htm) |
 
 ## 司法解释（最高人民法院）
