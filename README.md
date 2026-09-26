@@ -1,0 +1,129 @@
+# 中国劳动法知识库（china-labor-advisor）
+
+单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **8 部法律法规全文**的结构化知识模块（`topics/`），共 **57 个章节文件**。用户只需直接提问（"我被裁了"、"工伤了怎么办"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
+
+- **技能入口**: [china-labor-advisor/SKILL.md](china-labor-advisor/SKILL.md)
+- **生成日期**: 2026-09-26
+- **法律文本基准**: 劳动法（2018修正）、劳动合同法（2012修正）、社会保险法（2018修正）、调解仲裁法（2009）、民法典（2020）、工伤保险条例（2010修订）、年休假条例（2007）+实施办法（2008）、最高法劳动争议解释（一）（2021）+（二）（2025）
+
+---
+
+## 技能内部结构
+
+```
+china-labor-advisor/
+├── SKILL.md                    ← 技能入口：场景路由表 + 法条定位表 + 主题索引
+└── topics/                     ← 8 个法律知识模块（每个 = INDEX.md + chapters/ + 3 支撑文件）
+    ├── china-labor-law/                劳动法（13章）· 框架法 + 劳动者维权行动手册
+    ├── labor-contract-law/             劳动合同法（8章）· 合同/解除/N与2N/派遣
+    ├── social-insurance-law/           社会保险法（12章）· 五险/征缴/待遇
+    ├── labor-dispute-arbitration-law/  调解仲裁法（5章）· 仲裁前置/时效/一裁终局
+    ├── labor-dispute-judicial-interpretations/  最高法解释一+二（8章）· 审判口径（2025最新）
+    ├── civil-code/                     民法典（5章）· 协议撤销/人格权/侵权赔偿
+    ├── work-injury-regulations/        工伤保险条例（4章）· 认定/伤残梯度/工亡
+    └── paid-annual-leave-regulations/  年休假条例+办法（2章）· 折算/300%补偿
+
+每个模块目录内：INDEX.md（模块索引，原 SKILL.md）+ chapters/ + glossary.md + patterns.md + cheatsheet.md
+（china-labor-law 另含 worker-playbook.md 劳动者维权行动手册）
+```
+
+## 8 个知识模块
+
+| 模块 | 法律依据 | 章节 | 职责 |
+|---|---|---|---|
+| [china-labor-law](china-labor-advisor/topics/china-labor-law/INDEX.md) | 《劳动法》107条（2018修正） | 13 | **框架法**：就业、工时、工资、社保、安全卫生、特殊保护、争议、法律责任 |
+| [labor-contract-law](china-labor-advisor/topics/labor-contract-law/INDEX.md) | 《劳动合同法》98条（2012修正） | 8 | **劳动关系特别法**：订立、二倍工资、无固定期限、解除/终止、N与2N、劳务派遣 |
+| [social-insurance-law](china-labor-advisor/topics/social-insurance-law/INDEX.md) | 《社会保险法》98条（2018修正） | 12 | **社保特别法**：五险框架、征缴、待遇、基金、监督处罚 |
+| [labor-dispute-arbitration-law](china-labor-advisor/topics/labor-dispute-arbitration-law/INDEX.md) | 《调解仲裁法》（2009） | 5 | **程序法**：仲裁前置、1年时效、一裁终局、开庭举证 |
+| [labor-dispute-judicial-interpretations](china-labor-advisor/topics/labor-dispute-judicial-interpretations/INDEX.md) | 最高法解释（一）54条+（二）21条 | 8 | **审判口径**：受案、当事人、竞业、放弃社保无效、时效失权（2025-09-01最新） |
+| [civil-code](china-labor-advisor/topics/civil-code/INDEX.md) | 《民法典》1260条（2021施行） | 5 | **民事基本法**（劳动关联）：协议撤销、格式条款、人格权（性骚扰/个人信息）、用人单位责任、工伤侵权双轨 |
+| [work-injury-regulations](china-labor-advisor/topics/work-injury-regulations/INDEX.md) | 《工伤保险条例》67条（2010修订） | 4 | **行政法规**：工伤认定、48小时、伤残待遇梯度、工亡三费 |
+| [paid-annual-leave-regulations](china-labor-advisor/topics/paid-annual-leave-regulations/INDEX.md) | 年休假条例10条+实施办法19条 | 2 | **行政规章**：5/10/15天档位、两道折算、300%未休补偿 |
+
+---
+
+## 使用方法
+
+**直接问场景即可**，技能自动路由（完整路由表见 [SKILL.md](china-labor-advisor/SKILL.md)）：
+
+| 提问方式 | 示例 | 路由结果 |
+|---|---|---|
+| **场景** | "被裁员了怎么算补偿"、"没签劳动合同能要什么" | 劳动合同法 ch04/ch02 + 司法解释联动 |
+| **法条** | "劳动合同法第38条"、"解释二第19条" | 法条定位表 → 对应模块 |
+| **计算** | "工伤十级能赔多少"、"年假没休给多少钱" | 工伤条例 ch03 / 年休假 cheatsheet 公式 |
+| **程序** | "时效过了吗"、"一裁终局什么意思" | 仲裁法 + 解释二20条 |
+| **跨模块** | "上下班车祸，工伤和民事怎么并行" | 路由表已标联动：工伤条例 ch02 + 民法典 ch05 |
+
+**模块内文件分工**：
+- `INDEX.md` — 模块索引：核心框架 + 章节索引 + 主题索引 + 适用边界
+- `chapters/chXX-*.md` — 逐章精读：Core Idea / Frameworks / Anti-patterns / Worked Example / Takeaways
+- `glossary.md` — 术语表（按条文）
+- `patterns.md` — 审查方法与决策流程（"遇到X怎么操作"）
+- `cheatsheet.md` — 速查表、决策卡、关键数字卡、高频误判卡
+
+---
+
+## 跨模块联动速查（高频场景）
+
+| 场景 | 主模块 | 联动模块 |
+|---|---|---|
+| 被裁员/辞退，算 N 还是 2N | labor-contract-law ch04 | 解释一47条（未通知工会=违法解除）、解释二16–18条（继续履行/空窗工资） |
+| 没签劳动合同 | labor-contract-law ch02 | 解释二6–11条（二倍工资精度/免责/两连签）、民法典490条（事实合同） |
+| 竞业限制 | labor-contract-law ch02 | 解释一36–40条（30%补偿/3个月解约）、解释二13–15条、民法典585条（违约金酌减） |
+| 公司没缴社保 / 放弃社保声明 | social-insurance-law ch07 | 解释二19条（声明无效+38条解除+补缴后索回补贴） |
+| 欠薪 | china-labor-law ch05 | 解释一15条（欠条直诉）、49条（保全）、仲裁法（离职起1年） |
+| 工伤 | work-injury-regulations | 社保法 ch04、民法典 ch05（第三人侵权双轨：1179/1213条） |
+| 离职协议翻盘 | 解释一35条 | 民法典 ch01（147–152条撤销+除斥期间） |
+| 年休假没休/离职结算 | paid-annual-leave-regulations | 仲裁法（1年时效）、民法典497条（格式条款无效） |
+| 性骚扰/查手机/个人信息 | civil-code ch04 | 劳动法 ch06、劳动合同法8条 |
+| 换壳/集团内调动 | 解释一46条（工龄合并） | 解释二3、10条（混同用工/两连签计次） |
+| 告谁（皮包/挂靠/无照） | 解释 ch03/ch05 | 工伤条例66条（穿透）、解释一29条（出资人） |
+
+---
+
+## 分层适用关系
+
+```
+特别法优先：
+  劳动法 / 劳动合同法 / 社会保险法 / 调解仲裁法（特别法）
+      ↓ 有规定从其规定；无规定参照 ↓
+  民法典（民事基本法，补充层）
+      ↓ 细化标准 ↓
+  工伤保险条例 / 年休假条例+办法（行政法规/规章）
+      ↓ 审判展开 ↓
+  最高法解释（一）（二）——回答"法院实际怎么判"
+```
+
+**关键时点**：
+- **2021-01-01**：民法典施行（旧九法废止）——此前事实按**行为时法**
+- **2025-09-01**：解释（二）施行——与解释（一）冲突**以（二）为准**；解释一第32条1款（退休返聘=劳务）**已废止**
+
+---
+
+## 原始法律文本
+
+`_sources/` 目录保存 8 部法律的全文（`.txt` 提取文本 + 原始 `.html`），是全部章节文件的**唯一事实来源**：
+
+| 文件 | 内容 |
+|---|---|
+| labor-law-2018.pdf / .txt | 劳动法（原书 PDF+提取） |
+| laodonghetongfa.txt | 劳动合同法 |
+| shehuibaoxianfa.txt | 社会保险法 |
+| tiaojiezhongcaifa.txt | 劳动争议调解仲裁法 |
+| jieshiyi.txt / jieshier.txt | 最高法解释（一）/（二） |
+| minfadian_full.txt | 民法典（1260条） |
+| gongshangtiaoli.txt | 工伤保险条例 |
+| nianxiujia-tiaoli.txt / nianxiujia-banfa.txt | 年休假条例 / 实施办法 |
+
+---
+
+## 范围与免责声明
+
+**覆盖**：8 部法律/法规全文，按劳动者维权视角深度展开（每条文配 When to use / Anti-patterns / Worked Example）。
+
+**已知边界**：
+- **地方口径**：两金标准（工伤医疗/就业补助金）、停工留薪期目录、双赔/补差、加班费基数细则等以**省级规定与受诉法院口径**为准（知识库内以 ※ 标注）
+- **未展开**：《职业病防治法》《安全生产法》等未建模块（相关条文已交叉引用）；民法典物权/婚姻/继承编仅交叉提及
+- **时效性**：生成于 2026-09-26，此后新司法解释/修订以官方文本为准
+
+**免责声明**：本知识库为法律知识整理，**不构成法律意见**。个案结论受证据、伤残等级鉴定与地方实践影响，重大争议请咨询执业律师。
