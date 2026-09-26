@@ -32,7 +32,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 加班费 | [劳动法](topics/china-labor-law/INDEX.md) ch04 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch04（42条两步举证） |
 | 公司没缴社保 / 签了放弃社保声明 | [社保法](topics/social-insurance-law/INDEX.md) ch07 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch08（19条声明无效+解除补偿） |
 | 公积金该交多少 / 单位不缴公积金 | [公积金条例](topics/housing-fund-regulations/INDEX.md) ch01（16、18条缴存公式与比例） | ch02（37、38条投诉与强制执行）、[社保法 cheatsheet](topics/social-insurance-law/cheatsheet.md)（五险比例速查） |
-| 审查公司规章制度 / 员工手册合不合法 | [规章制度审查](topics/policy-review/INDEX.md)（四步审查流程+10主题红牌库） | 五级定级报告（🔴违法/🟠损害权益/🟡程序风险/🔵欠佳），逐条给法律依据与应对 |
+| 审查公司规章制度 / 员工手册合不合法 | [规章制度审查](topics/policy-review/INDEX.md)（四步审查流程+10主题红牌库） | 五级定级报告（🔴违法/🟠损害权益/🟡程序风险/🔵欠佳/🟢合规），逐条给法律依据与应对 |
 | 工伤（受伤了/认定/待遇/赔偿） | [工伤条例](topics/work-injury-regulations/INDEX.md) ch02–ch03 | [社保法](topics/social-insurance-law/INDEX.md) ch04、[民法典](topics/civil-code/INDEX.md) ch05（第三人侵权双轨） |
 | 上下班途中车祸 | [工伤条例](topics/work-injury-regulations/INDEX.md) ch02（14条六+举证包） | [民法典](topics/civil-code/INDEX.md) ch05（1213条保险顺序）、[劳动法](topics/china-labor-law/INDEX.md) ch04 |
 | 竞业限制/保密协议/服务期 | [labor-contract-law](topics/labor-contract-law/INDEX.md) ch02 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch07（适配原则/违约双付）、[民法典](topics/civil-code/INDEX.md) ch03（585条违约金酌减） |

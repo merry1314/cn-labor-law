@@ -71,4 +71,4 @@
 - **Ch 11**: 各监督发现后的法律责任条款
 - **行政复议法/行政诉讼法**: 对征收、经办行为的复议诉讼程序
 - **劳动合同法 ch06**: 劳动监察与社保监督的双轨监督体系
-- **劳动争议调解仲裁法**: 第83条三款"对单位争议走调解仲裁诉讼"的程序依据——见 [labor-dispute-arbitration-law](../../labor-dispute-arbitration-law/INDEX.md)
+- **社会保险法 第83条三款**: "个人与所在用人单位发生社会保险争议的，可以依法申请调解、仲裁，提起诉讼"——对单位争议走调解仲裁诉讼的程序依据（见 [labor-dispute-arbitration-law](../../labor-dispute-arbitration-law/INDEX.md)）
