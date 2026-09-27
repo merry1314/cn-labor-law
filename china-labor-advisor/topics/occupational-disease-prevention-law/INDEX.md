@@ -6,7 +6,7 @@ description: "知识库：《中华人民共和国职业病防治法》（2001�
 <!-- argument-hint: [主题、条文号或章号，如"职业病诊断"、"前期预防"、"三同时"、"第57条"、"ch04"] -->
 
 # 职业病防治法（2018修正）
-**通过**: 2001-10-27 | **最新修正**: 2018-12-29 | **施行**: 2002-05-01 | **条文**: 7章87条 | **Generated**: 2026-09-27
+**通过**: 2001-10-27 | **最新修正**: 2018-12-29 | **施行**: 2002-05-01 | **条文**: 7章88条 | **Generated**: 2026-09-27
 **官方原文**: [中国人大网](http://www.npc.gov.cn/npc/c30834/201812/t20181229_1875358.html)
 **联动**: 《工伤保险条例》（职业病认定为工伤的接口）、《劳动法》（第6章劳动安全卫生）
 
@@ -61,7 +61,8 @@ description: "知识库：《中华人民共和国职业病防治法》（2001�
 | ch03 | [chapters/ch03-protection.md](chapters/ch03-protection.md) | 劳动过程中的防护与管理 | 第21–42条 |
 | ch04 | [chapters/ch04-diagnosis.md](chapters/ch04-diagnosis.md) | 职业病诊断与保障 | 第43–61条 |
 | ch05 | [chapters/ch05-supervision.md](chapters/ch05-supervision.md) | 监督检查 | 第62–68条 |
-| ch06 | [chapters/ch06-liability.md](chapters/ch06-liability.md) | 法律责任 | 第69–85条 |
+| ch06 | [chapters/ch06-liability.md](chapters/ch06-liability.md) | 法律责任 | 第69–84条 |
+| ch07 | [chapters/ch07-supplementary.md](chapters/ch07-supplementary.md) | 附则 | 第85–88条 |
 
 ---
 

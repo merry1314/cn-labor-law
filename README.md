@@ -1,6 +1,6 @@
 # 中国劳动法知识库（china-labor-advisor）
 
-单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **18 部法律法规全文**的结构化知识模块（`topics/`，共 **96 个章节文件**）与 **1 个应用型审查模块**（policy-review，10 个审查主题）。用户只需直接提问（"我被裁了"、"工伤了怎么办"、"公积金该交多少"、"帮我看看员工手册合不合法"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
+单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **18 部法律法规全文**的结构化知识模块（`topics/`，共 **97 个章节文件**）与 **1 个应用型审查模块**（policy-review，10 个审查主题）。用户只需直接提问（"我被裁了"、"工伤了怎么办"、"公积金该交多少"、"帮我看看员工手册合不合法"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
 
 - **技能入口**: [china-labor-advisor/SKILL.md](china-labor-advisor/SKILL.md)
 - **生成日期**: 2026-09-27
@@ -25,7 +25,7 @@ china-labor-advisor/
     ├── housing-fund-regulations/       住房公积金管理条例（2章）· 缴存比例/提取/投诉
     ├── migrant-worker-wage-regulations/  保障农民工工资支付条例（6章）· 工资支付/清偿/工程建设制度
     ├── labor-inspection-regulations/   劳动保障监察条例（3章）· 监察职责/调查/加付赔偿
-    ├── occupational-disease-prevention-law/  职业病防治法（7章）· 预防/健康检查/诊断鉴定
+    ├── occupational-disease-prevention-law/  职业病防治法（7章）· 预防/健康检查/诊断鉴定/附则
     ├── work-safety-law/                安全生产法（6章）· 安全义务/从业人员权利/事故处罚
     ├── employment-promotion-law/       就业促进法（4章）· 公平就业/反歧视/就业援助
     ├── female-worker-protection/       女职工劳动保护特别规定（3章）· 三期/产假/生育津贴
@@ -53,7 +53,7 @@ china-labor-advisor/
 | [housing-fund-regulations](china-labor-advisor/topics/housing-fund-regulations/INDEX.md) | 《住房公积金管理条例》50条（2026第三次修订，国令第844号） | 2 | **行政法规**：缴存比例5%–国家最高比例、月缴存额公式、提取九情形、不缴强制执行、骗提骗贷罚则 |
 | [migrant-worker-wage-regulations](china-labor-advisor/topics/migrant-worker-wage-regulations/INDEX.md) | 《保障农民工工资支付条例》64条（2020施行） | 6 | **行政法规**：工资支付形式、清偿责任链、工程建设五项制度、失信惩戒、拒不支付劳动报酬罪移送 |
 | [labor-inspection-regulations](china-labor-advisor/topics/labor-inspection-regulations/INDEX.md) | 《劳动保障监察条例》36条（2004施行） | 3 | **行政法规**：监察职责、管辖分工、调查程序、拖欠工资加付50%–100%、违法工时罚款 |
-| [occupational-disease-prevention-law](china-labor-advisor/topics/occupational-disease-prevention-law/INDEX.md) | 《职业病防治法》88条（2018修正） | 7 | **法律**：前期预防三同时、职业健康检查、职业病诊断鉴定、工伤+民事赔偿 |
+| [occupational-disease-prevention-law](china-labor-advisor/topics/occupational-disease-prevention-law/INDEX.md) | 《职业病防治法》88条（2018修正） | 7 | **法律**：前期预防三同时、职业健康检查、职业病诊断鉴定、工伤+民事赔偿、附则 |
 | [work-safety-law](china-labor-advisor/topics/work-safety-law/INDEX.md) | 《安全生产法》119条（2021修正） | 6 | **法律**：生产经营单位安全义务、从业人员六项权利、事故调查、事故罚款30万–2000万 |
 | [employment-promotion-law](china-labor-advisor/topics/employment-promotion-law/INDEX.md) | 《就业促进法》69条（2015修正） | 4 | **法律**：平等就业权、反就业歧视（性别/残疾/乙肝/户籍）、公共就业服务、就业援助、歧视可直接起诉 |
 | [female-worker-protection](china-labor-advisor/topics/female-worker-protection/INDEX.md) | 《女职工劳动保护特别规定》16条（2012） | 3 | **行政法规**：三期不得降薪辞退、产假98天+地方奖励假、生育津贴、哺乳期1小时、性骚扰防治 |

@@ -37,9 +37,17 @@
   - 劳动保障监察条例：原中国政府网政策库链接失效 → 替换为国务院公报全文
   - 工会法：原人社部链接为 JS 渲染空壳页 → 替换为全国人大网 2021 修正决定全文
 - **LEGAL-SOURCES.md 劳动合同法链接修正**：原链接指向 2007 年原文（注册资本50万、旧第66/92条），修正为 2012 年修正决定（注册资本200万+行政许可）
-- **职业病防治法条数修正**：全库误标"6章87条"，实际为**7章88条**（第七章附则含第87-88条）；修正 INDEX.md、SKILL.md、README.md、CHANGELOG.md、consistency-check.go（articleLimits 87→88、expectedChapters 6→7）
-- **README 与实际结构对齐**：修正目录树模块数（15→18）、源文件清单（17→18部/19→20个文件）、分层关系，与 18 部/18 模块/96 章一致
+- **职业病防治法条数修正**：全库误标"6章87条"，实际为**7章88条**（第七章附则含第85-88条）；修正 INDEX.md（正文7章87条→7章88条）、SKILL.md、README.md、CHANGELOG.md、consistency-check.go（articleLimits 87→88、expectedChapters 6→7）；新增 ch07-supplementary.md（附则：第85-88条，含术语定义/劳务派遣用工单位义务/医疗机构放射性/施行日期）
+- **README 与实际结构对齐**：修正目录树模块数（15→18）、源文件清单（17→18部/19→20个文件）、分层关系，与 18 部/18 模块/97 章一致
 - **退休返聘口径修正**：worker-playbook.md:64、china-labor-law/INDEX.md:161 仍写"退休返聘=劳务关系，不走劳动争议程序"——与《超龄劳动者基本权益保障暂行规定》第19条冲突（四项基本权益仲裁前置）；已修正为区分四项权益争议（仲裁前置）与其他争议（民事诉讼），并引用新模块
+
+### 修复（第二轮审计回归）
+- **职业病防治法第七章附则缺失**：模块仅 6 个章节文件（ch01-ch06），第七章附则（第85-88条：术语定义/劳务派遣用工单位义务/医疗机构放射性/施行日期）完全无章节承载；新增 ch07-supplementary.md 补全，expectedChapters 6→7，expectedTotalChapters 96→97
+- **SKILL.md:3 守卫正则被空格绕过**：frontmatter description 写"15部法律法规"（无空格），校验匹配"15 部法律法规"（带空格），12/12 全绿但旧口径残留；修正为"18部"并重构旧口径扫描为列表+无空格变体双重检测
+- **INDEX.md 正文自相矛盾**：occupational-disease-prevention-law/INDEX.md description 写"7章88条"、正文写"7章87条"；修正正文为 7章88条
+- **consistency-check.go 检查项名称硬编码**：checkModuleCount/checkChapterCount 的 name 字段写死"17 法律模块"/"章节总数 = 95"，改用 fmt.Sprintf + 常量动态生成
+- **新模块 frontmatter 缺 name 字段**：elderly-worker-protection/INDEX.md 是 19 个模块中唯一缺 name 字段的，已补全
+- **CHANGELOG expectedChapters 声称 6→7 但代码仍为 6**：上一轮 commit 声称改但实际未改（后因校验失败回退），本轮真正落实
 
 ### 修复（N1–N5）
 - **N1 校验脚本规则级改造**：`consistency-check.go` 从 9 项实例级硬编码校验重构为 12 项规则级校验。新增：DYNAMIC-DATA 表格算术校验（适用年度=收入年度+1、补助金=收入×20）、通用路由校验（所有模块/chNN 引用必须存在）、法条引用越界扫描（配 18 部法条数上限表）、数据基准日新鲜度（>13 个月告警）、条号体例一致性、动态数据三处数值一致性

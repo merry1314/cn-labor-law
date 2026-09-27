@@ -70,7 +70,7 @@ var expectedChapters = map[string]int{
 	"housing-fund-regulations":               2,
 	"migrant-worker-wage-regulations":        6,
 	"labor-inspection-regulations":           3,
-	"occupational-disease-prevention-law":    6,
+	"occupational-disease-prevention-law":    7,
 	"work-safety-law":                        6,
 	"employment-promotion-law":               4,
 	"female-worker-protection":               3,
@@ -111,7 +111,7 @@ var articleLimits = map[string]int{
 
 const (
 	expectedLawModules    = 18
-	expectedTotalChapters = 96
+	expectedTotalChapters = 97
 )
 
 type check struct {
@@ -159,7 +159,7 @@ func main() {
 
 // 1. 模块总数校验
 func checkModuleCount() check {
-	c := check{name: "模块总数 = 17 法律模块 + 1 policy-review"}
+	c := check{name: fmt.Sprintf("模块总数 = %d 法律模块 + 1 policy-review", expectedLawModules)}
 
 	entries, err := os.ReadDir(topicsDir)
 	if err != nil {
@@ -186,7 +186,7 @@ func checkModuleCount() check {
 
 // 2. 章节总数校验
 func checkChapterCount() check {
-	c := check{name: "章节总数 = 95"}
+	c := check{name: fmt.Sprintf("章节总数 = %d", expectedTotalChapters)}
 
 	total := 0
 	for _, mod := range lawModules {
@@ -324,16 +324,26 @@ func checkSkillReadmeConsistency() check {
 		return c
 	}
 
-	if strings.Contains(skillStr, "9 部法律法规") || strings.Contains(skillStr, "13 部法律法规") || strings.Contains(skillStr, "15 部法律法规") || strings.Contains(skillStr, "17 部法律法规") || strings.Contains(skillStr, "59 章节") || strings.Contains(skillStr, "80 章节") || strings.Contains(skillStr, "87 章节") || strings.Contains(skillStr, "95 章节") {
-		c.ok = false
-		c.msg = "SKILL.md 仍含旧口径 \"9/13/15/17 部\" 或 \"59/80/87/95 章节\""
-		return c
+	// 旧口径扫描（含无空格变体，防止正则被空格绕过）
+	stalePatterns := []string{
+		"9 部法律法规", "9部法律法规",
+		"13 部法律法规", "13部法律法规",
+		"15 部法律法规", "15部法律法规",
+		"17 部法律法规", "17部法律法规",
+		"59 章节", "87 章节", "80 章节",
+		"95 章节", "96 章节",
 	}
-
-	if strings.Contains(readmeStr, "9 部法律法规") || strings.Contains(readmeStr, "13 部法律法规") || strings.Contains(readmeStr, "15 部法律法规") || strings.Contains(readmeStr, "17 部法律法规") || strings.Contains(readmeStr, "59 章节") || strings.Contains(readmeStr, "80 章节") || strings.Contains(readmeStr, "87 章节") || strings.Contains(readmeStr, "95 章节") || strings.Contains(readmeStr, "95 个章节") {
-		c.ok = false
-		c.msg = "README.md 仍含旧口径 \"9/13/15/17 部\" 或 \"59/80/87/95 章节\""
-		return c
+	for _, p := range stalePatterns {
+		if strings.Contains(skillStr, p) {
+			c.ok = false
+			c.msg = fmt.Sprintf("SKILL.md 仍含旧口径 \"%s\"（或无空格变体）", p)
+			return c
+		}
+		if strings.Contains(readmeStr, p) {
+			c.ok = false
+			c.msg = fmt.Sprintf("README.md 仍含旧口径 \"%s\"（或无空格变体）", p)
+			return c
+		}
 	}
 
 	c.ok = true
