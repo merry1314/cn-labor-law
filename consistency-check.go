@@ -35,7 +35,7 @@ const (
 	readmePath = "README.md"
 )
 
-// 17 个法律知识模块
+// 18 个法律知识模块
 var lawModules = []string{
 	"china-labor-law",
 	"labor-contract-law",
@@ -54,6 +54,7 @@ var lawModules = []string{
 	"female-worker-protection",
 	"disabled-persons-protection-law",
 	"trade-union-law",
+	"elderly-worker-protection",
 }
 
 // 每个模块预期章节数
@@ -75,6 +76,7 @@ var expectedChapters = map[string]int{
 	"female-worker-protection":               3,
 	"disabled-persons-protection-law":        4,
 	"trade-union-law":                        4,
+	"elderly-worker-protection":             1,
 }
 
 // 各法律条文数上限（用于法条号越界扫描）
@@ -96,7 +98,9 @@ var articleLimits = map[string]int{
 	"保障农民工工资支付条例": 64,
 	"劳动监察条例":      36,
 	"劳动保障监察条例":    36,
-	"职业病防治法":      87,
+	"职业病防治法":      88,
+	"超龄劳动者规定":     24,
+	"超龄劳动者基本权益保障暂行规定": 24,
 	"安全生产法":       119,
 	"就业促进法":       69,
 	"女职工劳动保护特别规定": 16,
@@ -106,8 +110,8 @@ var articleLimits = map[string]int{
 }
 
 const (
-	expectedLawModules    = 17
-	expectedTotalChapters = 95
+	expectedLawModules    = 18
+	expectedTotalChapters = 96
 )
 
 type check struct {
@@ -276,7 +280,7 @@ func checkModuleFiles() check {
 
 // 4. SKILL.md 与 README.md 口径一致性
 func checkSkillReadmeConsistency() check {
-	c := check{name: "SKILL.md / README.md 头部统计口径一致（17 部 / 95 章）"}
+	c := check{name: fmt.Sprintf("SKILL.md / README.md 头部统计口径一致（%d 部 / %d 章）", expectedLawModules, expectedTotalChapters)}
 
 	skill, err := os.ReadFile(skillPath)
 	if err != nil {
@@ -294,41 +298,41 @@ func checkSkillReadmeConsistency() check {
 	skillStr := string(skill)
 	readmeStr := string(readme)
 
-	reSkill9 := regexp.MustCompile(`17 部法律法规`)
-	reSkill59 := regexp.MustCompile(`95 章节文件`)
-	if !reSkill9.MatchString(skillStr) {
+	reSkillLaw := regexp.MustCompile(fmt.Sprintf(`%d 部法律法规`, expectedLawModules))
+	reSkillCh := regexp.MustCompile(fmt.Sprintf(`%d 章节文件`, expectedTotalChapters))
+	if !reSkillLaw.MatchString(skillStr) {
 		c.ok = false
-		c.msg = "SKILL.md 未找到 \"17 部法律法规\""
+		c.msg = fmt.Sprintf("SKILL.md 未找到 \"%d 部法律法规\"", expectedLawModules)
 		return c
 	}
-	if !reSkill59.MatchString(skillStr) {
+	if !reSkillCh.MatchString(skillStr) {
 		c.ok = false
-		c.msg = "SKILL.md 未找到 \"95 章节文件\""
-		return c
-	}
-
-	reReadme9 := regexp.MustCompile(`17 部法律法规`)
-	reReadme59 := regexp.MustCompile(`95 个章节文件`)
-	if !reReadme9.MatchString(readmeStr) {
-		c.ok = false
-		c.msg = "README.md 未找到 \"17 部法律法规\""
-		return c
-	}
-	if !reReadme59.MatchString(readmeStr) {
-		c.ok = false
-		c.msg = "README.md 未找到 \"95 个章节文件\""
+		c.msg = fmt.Sprintf("SKILL.md 未找到 \"%d 章节文件\"", expectedTotalChapters)
 		return c
 	}
 
-	if strings.Contains(skillStr, "9 部法律法规") || strings.Contains(skillStr, "13 部法律法规") || strings.Contains(skillStr, "15 部法律法规") || strings.Contains(skillStr, "59 章节") || strings.Contains(skillStr, "80 章节") || strings.Contains(skillStr, "87 章节") {
+	reReadmeLaw := regexp.MustCompile(fmt.Sprintf(`%d 部法律法规`, expectedLawModules))
+	reReadmeCh := regexp.MustCompile(fmt.Sprintf(`%d 个章节文件`, expectedTotalChapters))
+	if !reReadmeLaw.MatchString(readmeStr) {
 		c.ok = false
-		c.msg = "SKILL.md 仍含旧口径 \"9/13/15 部\" 或 \"59/80/87 章节\""
+		c.msg = fmt.Sprintf("README.md 未找到 \"%d 部法律法规\"", expectedLawModules)
+		return c
+	}
+	if !reReadmeCh.MatchString(readmeStr) {
+		c.ok = false
+		c.msg = fmt.Sprintf("README.md 未找到 \"%d 个章节文件\"", expectedTotalChapters)
 		return c
 	}
 
-	if strings.Contains(readmeStr, "9 部法律法规") || strings.Contains(readmeStr, "13 部法律法规") || strings.Contains(readmeStr, "15 部法律法规") || strings.Contains(readmeStr, "59 章节") || strings.Contains(readmeStr, "80 章节") || strings.Contains(readmeStr, "87 章节") {
+	if strings.Contains(skillStr, "9 部法律法规") || strings.Contains(skillStr, "13 部法律法规") || strings.Contains(skillStr, "15 部法律法规") || strings.Contains(skillStr, "17 部法律法规") || strings.Contains(skillStr, "59 章节") || strings.Contains(skillStr, "80 章节") || strings.Contains(skillStr, "87 章节") || strings.Contains(skillStr, "95 章节") {
 		c.ok = false
-		c.msg = "README.md 仍含旧口径 \"9/13/15 部\" 或 \"59/80/87 章节\""
+		c.msg = "SKILL.md 仍含旧口径 \"9/13/15/17 部\" 或 \"59/80/87/95 章节\""
+		return c
+	}
+
+	if strings.Contains(readmeStr, "9 部法律法规") || strings.Contains(readmeStr, "13 部法律法规") || strings.Contains(readmeStr, "15 部法律法规") || strings.Contains(readmeStr, "17 部法律法规") || strings.Contains(readmeStr, "59 章节") || strings.Contains(readmeStr, "80 章节") || strings.Contains(readmeStr, "87 章节") || strings.Contains(readmeStr, "95 章节") || strings.Contains(readmeStr, "95 个章节") {
+		c.ok = false
+		c.msg = "README.md 仍含旧口径 \"9/13/15/17 部\" 或 \"59/80/87/95 章节\""
 		return c
 	}
 

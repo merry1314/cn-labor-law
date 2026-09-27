@@ -1,10 +1,10 @@
 # 中国劳动法知识库（china-labor-advisor）
 
-单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **17 部法律法规全文**的结构化知识模块（`topics/`，共 **95 个章节文件**）与 **1 个应用型审查模块**（policy-review，10 个审查主题）。用户只需直接提问（"我被裁了"、"工伤了怎么办"、"公积金该交多少"、"帮我看看员工手册合不合法"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
+单一技能 `china-labor-advisor`（中国劳动法顾问），内部集成 **18 部法律法规全文**的结构化知识模块（`topics/`，共 **96 个章节文件**）与 **1 个应用型审查模块**（policy-review，10 个审查主题）。用户只需直接提问（"我被裁了"、"工伤了怎么办"、"公积金该交多少"、"帮我看看员工手册合不合法"），技能内的**场景路由表**自动定位到对应法律模块——无需用户了解任何法律名称或技能结构。
 
 - **技能入口**: [china-labor-advisor/SKILL.md](china-labor-advisor/SKILL.md)
 - **生成日期**: 2026-09-27
-- **法律文本基准**: 劳动法（2018修正）、劳动合同法（2012修正）、社会保险法（2018修正）、调解仲裁法（2007通过，2008-05-01施行）、民法典（2020）、工伤保险条例（2010修订）、年休假条例（2007）+实施办法（2008）、住房公积金管理条例（2019修订）、保障农民工工资支付条例（2020）、劳动保障监察条例（2004）、职业病防治法（2018修正）、安全生产法（2021修正）、就业促进法（2015修正）、女职工劳动保护特别规定（2012）、残疾人保障法（2008修订，2018修正）、工会法（2021修正）、最高法劳动争议解释（一）（2021）+（二）（2025）
+- **法律文本基准**: 劳动法（2018修正）、劳动合同法（2012修正）、社会保险法（2018修正）、调解仲裁法（2007通过，2008-05-01施行）、民法典（2020）、工伤保险条例（2010修订）、年休假条例（2007）+实施办法（2008）、住房公积金管理条例（2019修订）、保障农民工工资支付条例（2020）、劳动保障监察条例（2004）、职业病防治法（2018修正）、安全生产法（2021修正）、就业促进法（2015修正）、女职工劳动保护特别规定（2012）、残疾人保障法（2008修订，2018修正）、工会法（2021修正）、超龄劳动者基本权益保障暂行规定（2026-07-01施行）、最高法劳动争议解释（一）（2021）+（二）（2025）
 
 ---
 
@@ -13,7 +13,7 @@
 ```
 china-labor-advisor/
 ├── SKILL.md                    ← 技能入口：场景路由表 + 法条定位表 + 主题索引
-└── topics/                     ← 15 个法律知识模块（每个 = INDEX.md + chapters/ + 支撑文件：glossary/patterns/cheatsheet；china-labor-law 另含 worker-playbook）
+└── topics/                     ← 18 个法律知识模块（每个 = INDEX.md + chapters/ + 支撑文件：glossary/patterns/cheatsheet；china-labor-law 另含 worker-playbook）
     ├── china-labor-law/                劳动法（13章）· 框架法 + 劳动者维权行动手册
     ├── labor-contract-law/             劳动合同法（8章）· 合同/解除/N与2N/派遣
     ├── social-insurance-law/           社会保险法（12章）· 五险/征缴/待遇
@@ -25,17 +25,20 @@ china-labor-advisor/
     ├── housing-fund-regulations/       住房公积金管理条例（2章）· 缴存比例/提取/投诉
     ├── migrant-worker-wage-regulations/  保障农民工工资支付条例（6章）· 工资支付/清偿/工程建设制度
     ├── labor-inspection-regulations/   劳动保障监察条例（3章）· 监察职责/调查/加付赔偿
-    ├── occupational-disease-prevention-law/  职业病防治法（6章）· 预防/健康检查/诊断鉴定
+    ├── occupational-disease-prevention-law/  职业病防治法（7章）· 预防/健康检查/诊断鉴定
     ├── work-safety-law/                安全生产法（6章）· 安全义务/从业人员权利/事故处罚
     ├── employment-promotion-law/       就业促进法（4章）· 公平就业/反歧视/就业援助
     ├── female-worker-protection/       女职工劳动保护特别规定（3章）· 三期/产假/生育津贴
+    ├── disabled-persons-protection-law/  残疾人保障法（4章）· 平等权/按比例就业/无障碍
+    ├── trade-union-law/                工会法（4章）· 结社权/集体合同/经费/罚则
+    ├── elderly-worker-protection/      超龄劳动者基本权益保障暂行规定（1章）· 四项基本权益/工伤/争议双通道
     └── policy-review/                  规章制度合规审查（应用层）· 四步流程+10主题红牌库
 
 每个模块目录内：INDEX.md（模块索引，原 SKILL.md）+ chapters/ + glossary.md + patterns.md + cheatsheet.md
 （china-labor-law 另含 worker-playbook.md 劳动者维权行动手册）
 ```
 
-## 15 个知识模块 + 1 个应用模块
+## 18 个知识模块 + 1 个应用模块
 
 | 模块 | 法律依据 | 章节 | 职责 |
 |---|---|---|---|
@@ -50,10 +53,13 @@ china-labor-advisor/
 | [housing-fund-regulations](china-labor-advisor/topics/housing-fund-regulations/INDEX.md) | 《住房公积金管理条例》50条（2026第三次修订，国令第844号） | 2 | **行政法规**：缴存比例5%–国家最高比例、月缴存额公式、提取九情形、不缴强制执行、骗提骗贷罚则 |
 | [migrant-worker-wage-regulations](china-labor-advisor/topics/migrant-worker-wage-regulations/INDEX.md) | 《保障农民工工资支付条例》64条（2020施行） | 6 | **行政法规**：工资支付形式、清偿责任链、工程建设五项制度、失信惩戒、拒不支付劳动报酬罪移送 |
 | [labor-inspection-regulations](china-labor-advisor/topics/labor-inspection-regulations/INDEX.md) | 《劳动保障监察条例》36条（2004施行） | 3 | **行政法规**：监察职责、管辖分工、调查程序、拖欠工资加付50%–100%、违法工时罚款 |
-| [occupational-disease-prevention-law](china-labor-advisor/topics/occupational-disease-prevention-law/INDEX.md) | 《职业病防治法》87条（2018修正） | 6 | **法律**：前期预防三同时、职业健康检查、职业病诊断鉴定、工伤+民事赔偿 |
+| [occupational-disease-prevention-law](china-labor-advisor/topics/occupational-disease-prevention-law/INDEX.md) | 《职业病防治法》88条（2018修正） | 7 | **法律**：前期预防三同时、职业健康检查、职业病诊断鉴定、工伤+民事赔偿 |
 | [work-safety-law](china-labor-advisor/topics/work-safety-law/INDEX.md) | 《安全生产法》119条（2021修正） | 6 | **法律**：生产经营单位安全义务、从业人员六项权利、事故调查、事故罚款30万–2000万 |
 | [employment-promotion-law](china-labor-advisor/topics/employment-promotion-law/INDEX.md) | 《就业促进法》69条（2015修正） | 4 | **法律**：平等就业权、反就业歧视（性别/残疾/乙肝/户籍）、公共就业服务、就业援助、歧视可直接起诉 |
 | [female-worker-protection](china-labor-advisor/topics/female-worker-protection/INDEX.md) | 《女职工劳动保护特别规定》16条（2012） | 3 | **行政法规**：三期不得降薪辞退、产假98天+地方奖励假、生育津贴、哺乳期1小时、性骚扰防治 |
+| [disabled-persons-protection-law](china-labor-advisor/topics/disabled-persons-protection-law/INDEX.md) | 《残疾人保障法》68条（2018修正） | 4 | **法律**：平等权、按比例就业1.5%、无障碍环境、法律援助 |
+| [trade-union-law](china-labor-advisor/topics/trade-union-law/INDEX.md) | 《工会法》58条（2021第三次修正） | 4 | **法律**：结社权、25人组建、集体合同、工会干部保护、经费2%、阻挠建会/打击报复罚则 |
+| [elderly-worker-protection](china-labor-advisor/topics/elderly-worker-protection/INDEX.md) | 《超龄劳动者基本权益保障暂行规定》24条（2026-07-01施行） | 1 | **部门规章**：超龄劳动者四项基本权益（报酬/休假/安全/工伤）、工伤必须缴、争议双通道 |
 | [policy-review](china-labor-advisor/topics/policy-review/INDEX.md) | 规章制度合规审查方法论（应用层） | 10主题 | **应用型**：上传制度文件→五级定级逐条审查→指出违法/损害权益条款→应对策略 |
 
 ---
@@ -144,9 +150,9 @@ china-labor-advisor/
 
 ## 原始法律文本
 
-`_sources/` 目录保存 **17 部**法律法规的提取文本（共 **19 个** `.txt` 文件，年休假含条例+办法两个文件）。17 部已建模块**全部**有对应 `_sources` 原文：
+`_sources/` 目录保存 **18 部**法律法规的提取文本（共 **20 个** `.txt` 文件，年休假含条例+办法两个文件）。18 部已建模块**全部**有对应 `_sources` 原文：
 
-**已建模块（17 部）**：
+**已建模块（18 部）**：
 
 | 文件 | 内容 |
 |---|---|
@@ -167,17 +173,18 @@ china-labor-advisor/
 | nvzhigong-tiaoli.txt | 女职工劳动保护特别规定（2012） |
 | canjirenbaozhangfa.txt | 残疾人保障法（2008修订，2018修正） |
 | gonghuifa.txt | 工会法（1992通过，2021修正） |
+| chaoling-laodongzhe.txt | 超龄劳动者基本权益保障暂行规定（2026-07-01施行，24条） |
 
 ---
 
 ## 范围与免责声明
 
-**覆盖**：17 部法律/法规全文，按劳动者维权视角深度展开（每条文配 When to use / Anti-patterns / Worked Example）。
+**覆盖**：18 部法律/法规全文，按劳动者维权视角深度展开（每条文配 When to use / Anti-patterns / Worked Example）。
 
 **已知边界**：
 - **地方口径**：两金标准（工伤医疗/就业补助金）、停工留薪期目录、双赔/补差、加班费基数细则、社保公积金具体费率、产假奖励假天数等以**省级规定与受诉法院口径**为准（知识库内以 ※ 标注），详见 [LOCAL-PRACTICE.md](LOCAL-PRACTICE.md)（含官方查询渠道与回答模板）
 - **动态数据**：一次性工亡补助金（20倍×上年度城镇居民人均可支配收入）等逐年更新的标准，文中已列近年度参考值，**数据基准日 2026-09-27**；所有动态数据点的更新位置与方法见 [DYNAMIC-DATA.md](DYNAMIC-DATA.md)，使用时以国家统计局/人社部当年公布为准
-- **法规原文核对**：回答中引用法条时附官方原文链接，17 部法律法规及司法解释的官方来源（全国人大网/中国政府网/最高人民法院）集中收录于 [LEGAL-SOURCES.md](LEGAL-SOURCES.md)，便于用户核对原文
+- **法规原文核对**：回答中引用法条时附官方原文链接，18 部法律法规及司法解释的官方来源（全国人大网/中国政府网/最高人民法院）集中收录于 [LEGAL-SOURCES.md](LEGAL-SOURCES.md)，便于用户核对原文
 - **未展开**：民法典物权/婚姻/继承编仅整理劳动关联点（见 civil-code 模块 Core Frameworks 第6点），未逐条展开
 - **时效性**：生成于 2026-09-27，此后新司法解释/修订以官方文本为准
 

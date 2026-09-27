@@ -7,7 +7,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 
 # 中国劳动法顾问（china-labor-advisor）
 
-**知识库**: 17 部法律法规全文结构化（劳动法/劳动合同法/社会保险法/调解仲裁法/最高法解释一+二/民法典/工伤保险条例/年休假条例+办法/住房公积金管理条例/保障农民工工资支付条例/劳动保障监察条例/职业病防治法/安全生产法/就业促进法/女职工劳动保护特别规定/残疾人保障法/工会法），共 95 章节文件 | **基准日**: 2026-09-27
+**知识库**: 18 部法律法规全文结构化（劳动法/劳动合同法/社会保险法/调解仲裁法/最高法解释一+二/民法典/工伤保险条例/年休假条例+办法/住房公积金管理条例/保障农民工工资支付条例/劳动保障监察条例/职业病防治法/安全生产法/就业促进法/女职工劳动保护特别规定/残疾人保障法/工会法/超龄劳动者基本权益保障暂行规定），共 96 章节文件 | **基准日**: 2026-09-27
 
 ## How to Use This Skill
 
@@ -45,7 +45,7 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 告谁（皮包公司/挂靠/无照/包工头） | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch03、ch05 | [工伤条例](topics/work-injury-regulations/INDEX.md) ch04（66条穿透） |
 | 劳务派遣（同工不同酬/退回/致害） | [labor-contract-law](topics/labor-contract-law/INDEX.md) ch05 | [民法典](topics/civil-code/INDEX.md) ch05（1191条二）、[年休假](topics/paid-annual-leave-regulations/INDEX.md)（14条派遣年假） |
 | 试用期被辞退 | [labor-contract-law](topics/labor-contract-law/INDEX.md) ch02 | ch04（试用期解除限制） |
-| 退休/返聘 | [司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch03（32条已废止） | [社保法](topics/social-insurance-law/INDEX.md) ch02（养老金）、[民法典](topics/civil-code/INDEX.md) ch05（1192条劳务） |
+| 退休/返聘/超龄劳动者 | [超龄劳动者规定](topics/elderly-worker-protection/INDEX.md)（四项权益+争议双通道）、[司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch03（32条已废止） | [社保法](topics/social-insurance-law/INDEX.md) ch02（养老金）、[民法典](topics/civil-code/INDEX.md) ch05（1192条劳务） |
 | 残疾人就业被拒/歧视/按比例就业 | [残疾人保障法](topics/disabled-persons-protection-law/INDEX.md) ch02 | [就业促进法](topics/employment-promotion-law/INDEX.md) ch01（29条按比例）、ch04（62条歧视直接起诉） |
 | 想组建工会/阻挠建会/集体合同/工会干部被辞 | [工会法](topics/trade-union-law/INDEX.md) ch01–ch02 | [劳动合同法](topics/labor-contract-law/INDEX.md) ch04（43条工会意见）、[司法解释](topics/labor-dispute-judicial-interpretations/INDEX.md) ch06（工会法19条任期保护） |
 
@@ -65,16 +65,17 @@ description: "中国劳动法顾问：劳动者与用人单位的劳动用工、
 | 年休假条例+实施办法 | [topics/paid-annual-leave-regulations](topics/paid-annual-leave-regulations/INDEX.md) — 2章 |
 | 保障农民工工资支付条例（64条） | [topics/migrant-worker-wage-regulations](topics/migrant-worker-wage-regulations/INDEX.md) — 6章 |
 | 劳动保障监察条例（36条） | [topics/labor-inspection-regulations](topics/labor-inspection-regulations/INDEX.md) — 3章 |
-| 职业病防治法（87条） | [topics/occupational-disease-prevention-law](topics/occupational-disease-prevention-law/INDEX.md) — 6章 |
+| 职业病防治法（88条） | [topics/occupational-disease-prevention-law](topics/occupational-disease-prevention-law/INDEX.md) — 7章 |
 | 安全生产法（119条） | [topics/work-safety-law](topics/work-safety-law/INDEX.md) — 6章 |
 | 就业促进法（69条） | [topics/employment-promotion-law](topics/employment-promotion-law/INDEX.md) — 4章 |
 | 女职工劳动保护特别规定（16条） | [topics/female-worker-protection](topics/female-worker-protection/INDEX.md) — 3章 |
 | 残疾人保障法（68条） | [topics/disabled-persons-protection-law](topics/disabled-persons-protection-law/INDEX.md) — 4章 |
 | 工会法（58条） | [topics/trade-union-law](topics/trade-union-law/INDEX.md) — 4章 |
+| 超龄劳动者规定（24条） | [topics/elderly-worker-protection](topics/elderly-worker-protection/INDEX.md) — 1章 |
 
 **综合入口**：[劳动者维权行动手册](topics/china-labor-law/worker-playbook.md)（从证据到执行的完整流程）。
 
-**法规原文核对**：[LEGAL-SOURCES.md](../LEGAL-SOURCES.md) — 17 部法律法规及司法解释的官方原文链接（全国人大网/中国政府网/最高人民法院），回答中引用法条时必须附上对应官方链接，便于用户核对原文。
+**法规原文核对**：[LEGAL-SOURCES.md](../LEGAL-SOURCES.md) — 18 部法律法规及司法解释的官方原文链接（全国人大网/中国政府网/最高人民法院），回答中引用法条时必须附上对应官方链接，便于用户核对原文。
 
 ---
 
