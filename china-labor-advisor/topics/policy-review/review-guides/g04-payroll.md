@@ -51,7 +51,7 @@
 4. 拖欠的加倍成本：责令后逾期不付→ 50%–100% **加付赔偿金**（85 条）
 
 ## 与其他模块联动
-- 工资全规则 → [china-labor-law ch04 工资](../../china-labor-law/INDEX.md)
+- 工资全规则 → [china-labor-law ch05 工资](../../china-labor-law/INDEX.md)
 - 拖欠工资的 38 条解除+经济补偿 → [g07](g07-termination.md)
 - 仲裁与支付令 → [labor-dispute-arbitration-law](../../labor-dispute-arbitration-law/INDEX.md)
 - 加班费基数 → [g03](g03-attendance.md)

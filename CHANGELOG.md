@@ -8,6 +8,24 @@
 
 ## [Unreleased]
 
+### 修复（2026-10-16 复审）
+- **consistency-check.go 头注释口径更新**：校验项说明由旧口径（15 模块/87 章）更新为现行口径（18 模块/97 章），消除注释与代码漂移（规则 4 的旧口径守卫扫描串本身正确，经复审确认无需修改）
+- **断链修复**：`elderly-worker-protection/INDEX.md` 的 LOCAL-PRACTICE.md 链接少一级目录（`../../` → `../../../`），全库链接校验恢复零断链
+
+### 修复（2026-10-16 核验）
+- **CI 工作流失败修复**：`.github/workflows/ci.yml`「代码格式检查」步骤失败——`consistency-check.go` 未能通过 `gofmt`。根因为 `expectedChapters` 中 `elderly-worker-protection` 条目对齐少 1 个空格，`gofmt -l` 返回非空导致 `test -z` 判负、CI 红。运行 `gofmt -w consistency-check.go` 修正对齐后，CI 全部步骤（gofmt / go vet / 一致性校验 12 项）恢复通过
+- **工亡补助金动态数据官方核验**：依据国家统计局《2025 年国民经济和社会发展统计公报》（2026-02-28 发布，[stats.gov.cn](https://www.stats.gov.cn/sj/zxfbhjd/202602/t20260228_1962662.html) / [gov.cn](https://www.gov.cn/lianbo/202602/content_7059980.htm)），核验 2025 年全国城镇居民人均可支配收入 = 56,502 元（同比 +4.3%），确认 2026 年度一次性工亡补助金 = 56,502×20 = 1,130,040 元（全国统一，2026 全年适用）准确无误。数据基准日（DYNAMIC-DATA.md + work-injury 三处 + README）统一更新至 2026-10-16；DYNAMIC-DATA.md 增补官方核验来源链接
+- **社会保险参保规模数据补充**：`social-insurance-law/cheatsheet.md` 新增「全国参保规模」表（2025 年末五险参保人数，依据上述统计公报），作为社保制度覆盖面宏观参考
+
+### 新增（2026-10-16）
+- **社保征缴处罚裁量基准引用**：《全国税务行政处罚裁量基准（2026 年版）》（国家税务总局公告 2026 年第 20 号，2026-11-01 施行）以《社会保险法》为制定依据之一——社保费划归税务征收后，欠缴社保的行政处罚（第 63/84/86 条）由税务机关按此基准裁量。以**轻量引用**形态收录：`social-insurance-law` 模块 cheatsheet/patterns 补裁量档位指引，`LEGAL-SOURCES.md` 新增「关联规范性文件」节登记官方原文链接（标注"尚未生效，2026-11-01 施行"）。未新建独立模块，保持 18 部法律模块边界
+- **LEGAL-SOURCES.md 计数修正**：头部"17 部法律法规"为旧口径残留（实际 18 部），修正为"18 部"
+
+### 修复（2026-10-16 全库审计）
+- **policy-review 章节号错指修复（5 处）**：审计发现 5 个审查指南「与其他模块联动」链接章号与主题错配——g01:43 制度→labor-contract-law ch01（原误 ch03）、g03:54 工时→china-labor-law ch04（原误 ch03）、g04:54 工资→china-labor-law ch05（原误 ch04）、g05:50 生育→social-insurance-law ch06（原误 ch05）、g08:54 违约金→labor-contract-law ch02（原误 ch03）。根因：consistency-check 路由校验只扫 README+SKILL、不扫 policy-review，章节重排后此类残留无自动护栏
+- **SKILL.md 基准日对齐**：基准日由 2026-09-27 对齐至 2026-10-16，与 DYNAMIC-DATA.md 数据基准日一致
+- **法条引用正确性抽检**：对照 _sources 原文核验高频引用——社会保险法第 83 条三款/第 84/86 条、工伤保险条例第 39 条（工亡三费：丧葬6个月/配偶40%/其他30%/孤寡+10%/20倍）+第 41 条、劳动合同法第 38/42/47/87 条，均准确无误
+
 ### 新增
 - **4 个新法律模块**（模块数 9→13，章节数 59→80）：
   - `migrant-worker-wage-regulations`：《保障农民工工资支付条例》64条，6章——工资支付三强制、清偿责任链、工程建设五项制度、失信惩戒、拒不支付劳动报酬罪移送

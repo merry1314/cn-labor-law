@@ -40,5 +40,5 @@
 
 ## 与其他模块联动
 - 程序瑕疵对"严重违纪解除"的影响 → [g07 解除与离职](g07-termination.md)
-- 制度依据劳动合同法的完整条文解读 → [labor-contract-law ch03](../../labor-contract-law/INDEX.md)
+- 制度依据劳动合同法的完整条文解读 → [labor-contract-law ch01](../../labor-contract-law/INDEX.md)（第4条规章制度民主程序+公示，在总则章）
 - 制度作为仲裁证据的举证规则 → [labor-dispute-arbitration-law](../../labor-dispute-arbitration-law/INDEX.md)（解除争议中**制度合法性+公示**由用人单位举证）

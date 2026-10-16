@@ -47,4 +47,4 @@
 - 年休假全规则 → [paid-annual-leave-regulations](../../paid-annual-leave-regulations/INDEX.md)
 - 医疗期与解除禁令 → [labor-contract-law ch04](../../labor-contract-law/INDEX.md)
 - 三期女职工特殊保护 → [g07](g07-termination.md)
-- 生育津贴与社保 → [social-insurance-law ch05 生育](../../social-insurance-law/INDEX.md)
+- 生育津贴与社保 → [social-insurance-law ch06 生育](../../social-insurance-law/INDEX.md)

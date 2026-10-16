@@ -80,7 +80,7 @@ cheatsheet: cheatsheet.md
 - [labor-inspection-regulations](../labor-inspection-regulations/INDEX.md)（第20条劳动保障监察）
 - [labor-dispute-judicial-interpretations](../labor-dispute-judicial-interpretations/INDEX.md)（解释一第32条1款退休返聘=劳务已废止 → 本规定进一步突破）
 - [social-insurance-law](../social-insurance-law/INDEX.md)（第15-18条养老/医疗/工伤保险衔接）
-- [LOCAL-PRACTICE.md](../../LOCAL-PRACTICE.md) — 各省超龄劳动者工伤保险试点办法※
+- [LOCAL-PRACTICE.md](../../../LOCAL-PRACTICE.md) — 各省超龄劳动者工伤保险试点办法※
 
 ## Scope & Limits
 

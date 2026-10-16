@@ -51,6 +51,6 @@
 4. 考勤记录由公司掌握——主张加班费时公司拒不提供考勤将承担不利后果（证据规则）
 
 ## 与其他模块联动
-- 工时加班全规则 → [china-labor-law ch03 工作时间](../../china-labor-law/INDEX.md)
+- 工时加班全规则 → [china-labor-law ch04 工作时间](../../china-labor-law/INDEX.md)
 - 加班费追索程序与时效 → [labor-dispute-arbitration-law](../../labor-dispute-arbitration-law/INDEX.md)
 - 工资拆分与基数 → [g04](g04-payroll.md)

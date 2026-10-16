@@ -51,5 +51,5 @@
 
 ## 与其他模块联动
 - 竞业限制全规则（解释二新口径）→ [labor-dispute-judicial-interpretations](../../labor-dispute-judicial-interpretations/INDEX.md)
-- 违约金白名单 → [labor-contract-law ch03](../../labor-contract-law/INDEX.md)
+- 违约金白名单 → [labor-contract-law ch02](../../labor-contract-law/INDEX.md)（服务期+竞业两类违约金，在订立章）
 - 被索赔后的仲裁应对 → [labor-dispute-arbitration-law](../../labor-dispute-arbitration-law/INDEX.md)

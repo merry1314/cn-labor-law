@@ -3,10 +3,10 @@
 // 用法：go run consistency-check.go
 //
 // 校验项（规则级，非特定缺陷硬编码）：
-//  1. 模块总数 = 15 法律模块 + 1 policy-review = 16
-//  2. 章节总数 = 87，各模块章节数匹配
+//  1. 模块总数 = 18 法律模块 + 1 policy-review = 19
+//  2. 章节总数 = 97，各模块章节数匹配
 //  3. 每个法律模块含 INDEX.md + chapters/ + glossary.md + patterns.md + cheatsheet.md
-//  4. SKILL.md 与 README.md 头部统计口径一致（15 部 / 87 章）
+//  4. SKILL.md 与 README.md 头部统计口径一致（18 部 / 97 章）+ 旧口径串不得出现
 //  5. 工亡补助金动态数据 3 处均含「数据基准日」标记
 //  6. DYNAMIC-DATA 表格算术一致性：适用年度=收入年度+1，补助金=收入×20
 //  7. 通用路由校验：所有 模块/chNN 引用的章节文件必须存在
@@ -76,7 +76,7 @@ var expectedChapters = map[string]int{
 	"female-worker-protection":               3,
 	"disabled-persons-protection-law":        4,
 	"trade-union-law":                        4,
-	"elderly-worker-protection":             1,
+	"elderly-worker-protection":              1,
 }
 
 // 各法律条文数上限（用于法条号越界扫描）
