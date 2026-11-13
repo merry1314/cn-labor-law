@@ -57,8 +57,8 @@ description: "知识库：《中华人民共和国职业病防治法》（2001�
 | 章号 | 文件 | 主题 | 核心条文 |
 |---|---|---|---|
 | ch01 | [chapters/ch01-general.md](chapters/ch01-general.md) | 总则 | 第1–12条 |
-| ch02 | [chapters/ch02-prevention.md](chapters/ch02-prevention.md) | 前期预防 | 第13–20条 |
-| ch03 | [chapters/ch03-protection.md](chapters/ch03-protection.md) | 劳动过程中的防护与管理 | 第21–42条 |
+| ch02 | [chapters/ch02-prevention.md](chapters/ch02-prevention.md) | 前期预防 | 第13–19条 |
+| ch03 | [chapters/ch03-protection.md](chapters/ch03-protection.md) | 劳动过程中的防护与管理 | 第20–42条 |
 | ch04 | [chapters/ch04-diagnosis.md](chapters/ch04-diagnosis.md) | 职业病诊断与保障 | 第43–61条 |
 | ch05 | [chapters/ch05-supervision.md](chapters/ch05-supervision.md) | 监督检查 | 第62–68条 |
 | ch06 | [chapters/ch06-liability.md](chapters/ch06-liability.md) | 法律责任 | 第69–84条 |
@@ -71,7 +71,7 @@ description: "知识库：《中华人民共和国职业病防治法》（2001�
 | 条文 | 主题 | 章节 |
 |---|---|---|
 | 第2条 | 职业病定义 | ch01 |
-| 第15条 | 职业病危害预评价 | ch02 |
+| 第17条 | 职业病危害预评价 | ch02 |
 | 第18条 | 三同时 | ch02 |
 | 第33条 | 如实告知职业病危害 | ch03 |
 | 第35条 | 职业健康检查 | ch03 |
