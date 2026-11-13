@@ -12,7 +12,8 @@
 
 ```
 china-labor-advisor/
-├── SKILL.md                    ← 技能入口：场景路由表 + 法条定位表 + 主题索引
+├── SKILL.md                    ← 技能入口：场景路由表 + 回答规范（法条定位表/主题索引/版本规则外置于 reference.md）
+├── reference.md                ← 外置参考数据：法条定位表 + 主题索引 + 版本时点规则 + 官方链接速查
 └── topics/                     ← 18 个法律知识模块（每个 = INDEX.md + chapters/ + 支撑文件：glossary/patterns/cheatsheet；china-labor-law 另含 worker-playbook）
     ├── china-labor-law/                劳动法（13章）· 框架法 + 劳动者维权行动手册
     ├── labor-contract-law/             劳动合同法（8章）· 合同/解除/N与2N/派遣

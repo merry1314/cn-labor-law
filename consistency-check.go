@@ -32,6 +32,7 @@ import (
 const (
 	topicsDir  = "china-labor-advisor/topics"
 	skillPath  = "china-labor-advisor/SKILL.md"
+	refPath    = "china-labor-advisor/reference.md"
 	readmePath = "README.md"
 )
 
@@ -434,11 +435,11 @@ func checkDynamicDataArithmetic() check {
 }
 
 //  7. 通用路由校验（规则级）
-//     扫描 README.md 和 SKILL.md 中所有 模块名/chNN 引用，断言对应章节文件存在
+//     扫描 README.md、SKILL.md、reference.md 中所有 模块名/chNN 引用，断言对应章节文件存在
 func checkRoutingGeneral() check {
 	c := check{name: "通用路由校验：所有 模块/chNN 引用的章节文件必须存在"}
 
-	files := []string{readmePath, skillPath}
+	files := []string{readmePath, skillPath, refPath}
 	// 匹配形如 module-name ch01 或 module-name/ch01 的引用
 	refRe := regexp.MustCompile(`([a-z-]+)\s*ch(\d{2})`)
 

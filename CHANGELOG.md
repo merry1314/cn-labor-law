@@ -8,6 +8,10 @@
 
 ## [Unreleased]
 
+### 优化（2026-11-13 book-to-skill 审核修复 P2/P3）
+- **P2 policy-review 补支撑文件**：新增 `cheatsheet.md`（五级定级判定规则/投诉分流决策表 12333 vs 12329/红牌 tells 速查/四步流程速卡）与 `glossary.md`（审查术语 17 条）；INDEX.md 补 Supporting Files 段并修正 4 处旧口径（9 模块/17 部 → 18 模块/18 部）
+- **P3 主 SKILL.md 瘦身外置**：法条定位表/主题索引/版本与时点规则/官方链接速查四段外置至新建 `reference.md`，正文 ~6,760 → ~4,284 tokens（预算 4,000；18 模块 hub 架构下超 7%，显式接受——场景路由表为路由能力核心，保留全量）；`consistency-check.go` 路由校验扫描范围加入 reference.md，README 目录树同步
+
 ### 修复（2026-10-16 复审）
 - **consistency-check.go 头注释口径更新**：校验项说明由旧口径（15 模块/87 章）更新为现行口径（18 模块/97 章），消除注释与代码漂移（规则 4 的旧口径守卫扫描串本身正确，经复审确认无需修改）
 - **断链修复**：`elderly-worker-protection/INDEX.md` 的 LOCAL-PRACTICE.md 链接少一级目录（`../../` → `../../../`），全库链接校验恢复零断链
